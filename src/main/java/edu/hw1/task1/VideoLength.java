@@ -1,7 +1,7 @@
 package edu.hw1.task1;
 
 public class VideoLength {
-    private static final String RAW_VIDEO_LENGTH_REGEX_PATTERN = "(?:[0-5][0-9]|60):(?:[0-5][0-9]|60)";
+    private static final String RAW_VIDEO_LENGTH_REGEX_PATTERN = "\\d{2}:[0-5][0-9]";
     private static final int SECONDS_IN_MINUTE = 60;
 
     private VideoLength() {

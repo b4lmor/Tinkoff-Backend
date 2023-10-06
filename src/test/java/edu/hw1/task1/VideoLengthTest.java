@@ -26,6 +26,7 @@ public class VideoLengthTest {
             Arguments.of("10:00", 10 * 60),
             Arguments.of("56:00", 56 * 60),
             Arguments.of("00:07", 7),
+            Arguments.of("99:59", 99 * 60 + 59),
             Arguments.of("00:55", 55)
         );
     }
@@ -41,11 +42,11 @@ public class VideoLengthTest {
 
     private static Stream<Arguments> provideInvalidParameters() {
         return Stream.of(
-            Arguments.of("65:55"),
             Arguments.of("773:33"),
             Arguments.of("10:008"),
             Arguments.of("6:00"),
             Arguments.of("00:99"),
+            Arguments.of("60:60"),
             Arguments.of(":")
         );
     }
