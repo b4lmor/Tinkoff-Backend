@@ -20,6 +20,7 @@ public class DigitCounter {
             absNumber /= VALUE_OF_NUMBER_SYSTEM;
             digitCounter++;
         }
+
         return digitCounter;
     }
 }
