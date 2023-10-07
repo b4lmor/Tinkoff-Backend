@@ -12,8 +12,8 @@ public class DigitCounterTest {
     @ParameterizedTest
     @DisplayName("Count digits in number")
     @MethodSource("provideParameters")
-    public void testDigitCounter(int input_number, int expectedResult) {
-        final int countedDigits = DigitCounter.countDigits(input_number);
+    public void testDigitCounter(int inputNumber, int expectedResult) {
+        final int countedDigits = DigitCounter.countDigits(inputNumber);
         assertThat(countedDigits)
             .isEqualTo(expectedResult);
     }

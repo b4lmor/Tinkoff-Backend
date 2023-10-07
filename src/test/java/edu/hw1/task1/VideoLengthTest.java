@@ -14,7 +14,7 @@ public class VideoLengthTest {
     @DisplayName("Parse video length from VALID 'mm:ss'")
     @MethodSource("provideValidParameters")
     public void testParseValidVideoLength(String rawVideoLength, int expectedResult) {
-        final int parsedVideoLength = VideoLength.parseVideoLength(rawVideoLength);
+        final int parsedVideoLength = VideoLength.minutesToSeconds(rawVideoLength);
         assertThat(parsedVideoLength)
             .isEqualTo(expectedResult);
     }
@@ -36,7 +36,7 @@ public class VideoLengthTest {
     @MethodSource("provideInvalidParameters")
     public void testParseInvalidVideoLength(String rawVideoLength) {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            VideoLength.parseVideoLength(rawVideoLength);
+            VideoLength.minutesToSeconds(rawVideoLength);
         });
     }
 

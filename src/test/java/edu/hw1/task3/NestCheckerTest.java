@@ -13,7 +13,7 @@ public class NestCheckerTest {
     @ParameterizedTest
     @DisplayName("Check the possibility of nesting for VALID arrays")
     @MethodSource("provideValidParameters")
-    public void testParseValidVideoLength(int[] array1, int[] array2, boolean expectedResult) {
+    public void testIsNestable(int[] array1, int[] array2, boolean expectedResult) {
         final boolean isNestable = NestChecker.isNestable(array1, array2);
         assertThat(isNestable)
             .isEqualTo(expectedResult);

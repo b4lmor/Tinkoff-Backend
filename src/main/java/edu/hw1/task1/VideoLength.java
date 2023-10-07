@@ -16,7 +16,7 @@ public class VideoLength {
         return minutes * SECONDS_IN_MINUTE;
     }
 
-    public static int parseVideoLength(String rawVideoLength) {
+    public static int minutesToSeconds(String rawVideoLength) {
         if (!isValidRawVideoLength(rawVideoLength)) {
             throw new IllegalArgumentException();
         }

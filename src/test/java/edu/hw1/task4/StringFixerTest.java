@@ -12,7 +12,7 @@ public class StringFixerTest {
     @ParameterizedTest
     @DisplayName("Fix broken string by swapping adjacent letters")
     @MethodSource("provideParameters")
-    public void testDigitCounter(String brokenString, String expectedResult) {
+    public void testFixString(String brokenString, String expectedResult) {
         final String fixedString = StringFixer.fixString(brokenString);
         assertThat(fixedString)
             .isEqualTo(expectedResult);

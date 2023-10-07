@@ -13,8 +13,8 @@ public class KaprekarConstantTest {
     @ParameterizedTest
     @DisplayName("Count the steps required to achieve the Kaprekar's constant with VALID number")
     @MethodSource("provideValidParameters")
-    public void testValidCountK(int input_number, int expectedResult) {
-        final int steps = KaprekarConstant.countK(input_number);
+    public void testValidCountK(int inputNumber, int expectedResult) {
+        final int steps = KaprekarConstant.countK(inputNumber);
         assertThat(steps)
             .isEqualTo(expectedResult);
     }

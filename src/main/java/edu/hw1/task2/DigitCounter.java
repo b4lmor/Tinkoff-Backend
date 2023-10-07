@@ -2,7 +2,7 @@ package edu.hw1.task2;
 
 public class DigitCounter {
 
-    private static final int VALUE_OF_NUMBER_SYSTEM = 10;
+    private static final int BASE_VALUE = 10;
 
     private DigitCounter() {
         throw new IllegalStateException("Utility class");
@@ -17,7 +17,7 @@ public class DigitCounter {
         int digitCounter = 0;
 
         while (absNumber != 0) {
-            absNumber /= VALUE_OF_NUMBER_SYSTEM;
+            absNumber /= BASE_VALUE;
             digitCounter++;
         }
 
