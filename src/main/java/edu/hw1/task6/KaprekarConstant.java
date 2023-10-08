@@ -1,13 +1,12 @@
 package edu.hw1.task6;
 
-import edu.hw1.task2.DigitCounter;
 import java.util.Arrays;
 
 public class KaprekarConstant {
 
     private static final int MIN_VALUE_FOR_COUNTK_FUNCTION = 1001;
     private static final int MAX_VALUE_FOR_COUNTK_FUNCTION = 9999;
-    private static final int DIGITS_IN_NUMBER = 4;
+    private static final int REQUIRED_NUMBER_LENGTH = 4;
     private static final int BASE_VALUE = 10;
     private static final int KAPREKAR_CONSTANT = 6174;
 
@@ -17,18 +16,18 @@ public class KaprekarConstant {
 
     private static int[] splitNumberTo4Digits(int number) {
         if (number == 0) {
-            return new int[]{1};
+            return new int[]{0, 0, 0, 0};
         }
 
-        int[] splitDigits = new int[DIGITS_IN_NUMBER];
+        int[] splitDigits = new int[REQUIRED_NUMBER_LENGTH];
         int ind = 0;
         int numberCopy = number;
 
-        while (numberCopy != 0 && ind != 4) {
+        while (numberCopy != 0 && ind != REQUIRED_NUMBER_LENGTH) {
             splitDigits[ind++] = numberCopy % BASE_VALUE;
             numberCopy /= BASE_VALUE;
         }
-        while (ind != 4) {
+        while (ind != REQUIRED_NUMBER_LENGTH) {
             splitDigits[ind++] = 0;
         }
 
@@ -37,16 +36,16 @@ public class KaprekarConstant {
 
     private static boolean allDigitsSame(int number) {
         int numberCopy = number;
-        int lastDigit = numberCopy % 10;
+        int lastDigit = numberCopy % BASE_VALUE;
 
         while (numberCopy != 0) {
-            int digit = numberCopy % 10;
+            int digit = numberCopy % BASE_VALUE;
 
             if (digit != lastDigit) {
                 return false;
             }
 
-            numberCopy /= 10;
+            numberCopy /= BASE_VALUE;
         }
 
         return true;
