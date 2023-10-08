@@ -23,7 +23,8 @@ public class KaprekarConstantTest {
         return Stream.of(
             Arguments.of(6621, 5),
             Arguments.of(6554, 4),
-            Arguments.of(1234, 3)
+            Arguments.of(1234, 3),
+            Arguments.of(2221, 5)
         );
     }
 
@@ -41,7 +42,9 @@ public class KaprekarConstantTest {
             Arguments.of(1000),
             Arguments.of(0),
             Arguments.of(-1000),
-            Arguments.of(1000000)
+            Arguments.of(1000000),
+            Arguments.of(1111),
+            Arguments.of(-8888)
         );
     }
 }
