@@ -5,6 +5,16 @@ public class CyclicBitShifter {
     private CyclicBitShifter() {
     }
 
+    public static int rotateRight(int n, int shift) {
+        int[] bits = getBits(n);
+        int[] shiftedBits = cyclicRightShift(bits, shift);
+        return getNumber(shiftedBits);
+    }
+
+    public static int rotateLeft(int n, int shift) {
+        return rotateRight(n, -shift);
+    }
+
     private static int[] getBits(int number) {
         int numberCopy = number;
         int numBits = 0;
@@ -53,16 +63,6 @@ public class CyclicBitShifter {
         }
 
         return number;
-    }
-
-    public static int rotateRight(int n, int shift) {
-        int[] bits = getBits(n);
-        int[] shiftedBits = cyclicRightShift(bits, shift);
-        return getNumber(shiftedBits);
-    }
-
-    public static int rotateLeft(int n, int shift) {
-        return rotateRight(n, -shift);
     }
 
 }

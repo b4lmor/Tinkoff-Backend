@@ -9,6 +9,19 @@ public class SpecificPalindrome {
     private SpecificPalindrome() {
     }
 
+    public static boolean isPalindromeDescendant(int number) {
+        if (number < 0) {
+            return isPalindromeDescendant(Math.abs(number));
+        }
+        if (number < BASE_NUMBER) {
+            return false;
+        }
+        if (!hasEvenLength(number)) {
+            return isPalindrome(number);
+        }
+        return isPalindrome(number) || isPalindromeDescendant(findDescendant(number));
+    }
+
     private static boolean isPalindrome(int number) {
         int numberCopy = number;
         int reversedNumber = 0;
@@ -42,20 +55,5 @@ public class SpecificPalindrome {
     private static boolean hasEvenLength(int number) {
         return DigitCounter.countDigits(number) % 2 == 0;
     }
-
-    public static boolean isPalindromeDescendant(int number) {
-        if (number < 0) {
-            return isPalindromeDescendant(Math.abs(number));
-        }
-        if (number < BASE_NUMBER) {
-            return false;
-        }
-        if (!hasEvenLength(number)) {
-            return isPalindrome(number);
-        }
-        return isPalindrome(number) || isPalindromeDescendant(findDescendant(number));
-    }
-
-
 
 }

@@ -7,14 +7,6 @@ public class VideoLength {
     private VideoLength() {
     }
 
-    private static boolean isValidRawVideoLength(String rawVideoLength) {
-        return rawVideoLength.matches(RAW_VIDEO_LENGTH_REGEX_PATTERN);
-    }
-
-    private static int convertMinutesToSeconds(int minutes) {
-        return minutes * SECONDS_IN_MINUTE;
-    }
-
     public static int minutesToSeconds(String rawVideoLength) {
         if (!isValidRawVideoLength(rawVideoLength)) {
             throw new IllegalArgumentException();
@@ -25,5 +17,13 @@ public class VideoLength {
         final int seconds = Integer.parseInt(minAndSec[1]);
 
         return convertMinutesToSeconds(minutes) + seconds;
+    }
+
+    private static boolean isValidRawVideoLength(String rawVideoLength) {
+        return rawVideoLength.matches(RAW_VIDEO_LENGTH_REGEX_PATTERN);
+    }
+
+    private static int convertMinutesToSeconds(int minutes) {
+        return minutes * SECONDS_IN_MINUTE;
     }
 }

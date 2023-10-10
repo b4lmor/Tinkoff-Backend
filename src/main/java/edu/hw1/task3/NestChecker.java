@@ -8,6 +8,13 @@ public class NestChecker {
     private NestChecker() {
     }
 
+    public static boolean isNestable(int[] array1, int[] array2) {
+        if (array1.length < MIN_LENGTH_OF_ARRAY || array2.length < MIN_LENGTH_OF_ARRAY) {
+            throw new IllegalArgumentException();
+        }
+        return (findMin(array1) > findMin(array2)) && (findMax(array1) < findMax(array2));
+    }
+
     private static int findMin(int[] array) {
         if (array.length == 0) {
             throw new IllegalArgumentException();
@@ -20,12 +27,5 @@ public class NestChecker {
             throw new IllegalArgumentException();
         }
         return Arrays.stream(array).max().getAsInt();
-    }
-
-    public static boolean isNestable(int[] array1, int[] array2) {
-        if (array1.length < MIN_LENGTH_OF_ARRAY || array2.length < MIN_LENGTH_OF_ARRAY) {
-            throw new IllegalArgumentException();
-        }
-        return (findMin(array1) > findMin(array2)) && (findMax(array1) < findMax(array2));
     }
 }

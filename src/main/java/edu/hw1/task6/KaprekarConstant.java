@@ -13,6 +13,14 @@ public class KaprekarConstant {
     private KaprekarConstant() {
     }
 
+    public static int countK(int number) {
+        if (!isNumberValid(number)) {
+            throw new IllegalArgumentException();
+        }
+
+        return countKValid(number);
+    }
+
     private static int[] splitNumberTo4Digits(int number) {
         if (number == 0) {
             return new int[]{0, 0, 0, 0};
@@ -82,13 +90,5 @@ public class KaprekarConstant {
         }
 
         return 1 + countKValid(result);
-    }
-
-    public static int countK(int number) {
-        if (!isNumberValid(number)) {
-            throw new IllegalArgumentException();
-        }
-
-        return countKValid(number);
     }
 }

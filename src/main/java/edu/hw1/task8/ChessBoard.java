@@ -13,26 +13,6 @@ public class ChessBoard {
     private ChessBoard() {
     }
 
-    private static boolean isBoardValid(int[][] board) {
-        if (board.length != CHESS_BOARD_SIDE_LENGTH) {
-            return false;
-        }
-        for (int[] line : board) {
-            if (line.length != CHESS_BOARD_SIDE_LENGTH) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private static boolean isPieceOnSpot(int x, int y, int[][] board, int pieceID) {
-        if (x < 0 || x >= CHESS_BOARD_SIDE_LENGTH
-         || y < 0 || y >= CHESS_BOARD_SIDE_LENGTH) {
-            return false;
-        }
-        return board[x][y] == pieceID;
-    }
-
     public static boolean knightBoardCapture(int[][] board) {
         if (!isBoardValid(board)) {
             throw new IllegalArgumentException();
@@ -53,5 +33,24 @@ public class ChessBoard {
         return true;
     }
 
+    private static boolean isBoardValid(int[][] board) {
+        if (board.length != CHESS_BOARD_SIDE_LENGTH) {
+            return false;
+        }
+        for (int[] line : board) {
+            if (line.length != CHESS_BOARD_SIDE_LENGTH) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isPieceOnSpot(int x, int y, int[][] board, int pieceID) {
+        if (x < 0 || x >= CHESS_BOARD_SIDE_LENGTH
+         || y < 0 || y >= CHESS_BOARD_SIDE_LENGTH) {
+            return false;
+        }
+        return board[x][y] == pieceID;
+    }
 
 }
