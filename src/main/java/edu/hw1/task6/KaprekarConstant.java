@@ -11,7 +11,6 @@ public class KaprekarConstant {
     private static final int KAPREKAR_CONSTANT = 6174;
 
     private KaprekarConstant() {
-        throw new IllegalStateException("Utility class");
     }
 
     private static int[] splitNumberTo4Digits(int number) {

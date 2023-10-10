@@ -11,7 +11,6 @@ public class ChessBoard {
     };
 
     private ChessBoard() {
-        throw new IllegalStateException("Utility class");
     }
 
     private static boolean isBoardValid(int[][] board) {

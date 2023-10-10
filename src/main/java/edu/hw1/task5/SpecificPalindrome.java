@@ -7,7 +7,6 @@ public class SpecificPalindrome {
     private static final int BASE_NUMBER = 10;
 
     private SpecificPalindrome() {
-        throw new IllegalStateException("Utility class");
     }
 
     private static boolean isPalindrome(int number) {

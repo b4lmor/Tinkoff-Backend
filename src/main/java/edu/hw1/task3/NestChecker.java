@@ -6,7 +6,6 @@ public class NestChecker {
     private static final int MIN_LENGTH_OF_ARRAY = 2;
 
     private NestChecker() {
-        throw new IllegalStateException("Utility class");
     }
 
     private static int findMin(int[] array) {

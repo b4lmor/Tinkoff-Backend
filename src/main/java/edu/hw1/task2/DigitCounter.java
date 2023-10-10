@@ -5,7 +5,6 @@ public class DigitCounter {
     private static final int BASE_VALUE = 10;
 
     private DigitCounter() {
-        throw new IllegalStateException("Utility class");
     }
 
     public static int countDigits(int number) {

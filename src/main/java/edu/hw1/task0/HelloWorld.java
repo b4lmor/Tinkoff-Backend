@@ -7,7 +7,6 @@ public class HelloWorld {
     private final static Logger LOGGER = LogManager.getLogger();
 
     private HelloWorld() {
-        throw new IllegalStateException("Utility class");
     }
 
     public static void printHelloWorld() {

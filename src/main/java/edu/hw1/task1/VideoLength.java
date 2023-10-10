@@ -5,7 +5,6 @@ public class VideoLength {
     private static final int SECONDS_IN_MINUTE = 60;
 
     private VideoLength() {
-        throw new IllegalStateException("Utility class");
     }
 
     private static boolean isValidRawVideoLength(String rawVideoLength) {

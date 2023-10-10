@@ -3,7 +3,6 @@ package edu.hw1.task4;
 public class StringFixer {
 
     private StringFixer() {
-        throw new IllegalStateException("Utility class");
     }
 
     public static String fixString(String brokenString) {

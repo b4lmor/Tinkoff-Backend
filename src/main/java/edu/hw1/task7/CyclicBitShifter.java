@@ -3,7 +3,6 @@ package edu.hw1.task7;
 public class CyclicBitShifter {
 
     private CyclicBitShifter() {
-        throw new IllegalStateException("Utility class");
     }
 
     private static int[] getBits(int number) {
