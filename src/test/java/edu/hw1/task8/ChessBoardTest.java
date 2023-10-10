@@ -86,7 +86,9 @@ public class ChessBoardTest {
                 Arguments.of((Object) new int[][]{
                         {1, 0, 1, 0, 1, 0, 1, 0},
                         {0, 1, 0, 1, 0, 1, 0, 1}
-                })
+                }),
+                Arguments.of((Object) null),
+                Arguments.of((Object) new int[][]{null, null})
         );
     }
 }

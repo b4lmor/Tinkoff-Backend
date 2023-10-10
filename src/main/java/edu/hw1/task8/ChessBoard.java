@@ -1,5 +1,7 @@
 package edu.hw1.task8;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ChessBoard {
     private static final int CHESS_BOARD_SIDE_LENGTH = 8;
     private static final int KNIGHT_ID = 1;
@@ -13,7 +15,7 @@ public class ChessBoard {
     private ChessBoard() {
     }
 
-    public static boolean knightBoardCapture(int[][] board) {
+    public static boolean knightBoardCapture(int @NotNull [] @NotNull [] board) {
         if (!isBoardValid(board)) {
             throw new IllegalArgumentException();
         }

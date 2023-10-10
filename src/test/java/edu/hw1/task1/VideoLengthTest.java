@@ -47,7 +47,9 @@ public class VideoLengthTest {
             Arguments.of("10:008"),
             Arguments.of("00:99"),
             Arguments.of("60:60"),
-            Arguments.of(":")
+            Arguments.of(":"),
+            Arguments.of("aaa"),
+            Arguments.of((Object) null)
         );
     }
 }
