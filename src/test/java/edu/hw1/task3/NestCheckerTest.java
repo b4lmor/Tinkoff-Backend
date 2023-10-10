@@ -13,7 +13,7 @@ public class NestCheckerTest {
     @ParameterizedTest
     @DisplayName("Check the possibility of nesting for VALID arrays")
     @MethodSource("provideValidParameters")
-    public void testIsNestable(int[] array1, int[] array2, boolean expectedResult) {
+    public void testValidIsNestable(int[] array1, int[] array2, boolean expectedResult) {
         final boolean isNestable = NestChecker.isNestable(array1, array2);
         assertThat(isNestable)
             .isEqualTo(expectedResult);
@@ -31,7 +31,7 @@ public class NestCheckerTest {
     @ParameterizedTest
     @DisplayName("Check the possibility of nesting for INVALID arrays")
     @MethodSource("provideInvalidParameters")
-    public void testParseInvalidVideoLength(int[] array1, int[] array2) {
+    public void testInvalidIsNestable(int[] array1, int[] array2) {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             NestChecker.isNestable(array1, array2);
         });
@@ -41,7 +41,8 @@ public class NestCheckerTest {
         return Stream.of(
             Arguments.of(new int[]{1}, new int[]{0, 5}),
             Arguments.of(new int[]{}, new int[]{0, 6, 9}),
-            Arguments.of(new int[]{}, new int[]{})
+            Arguments.of(new int[]{}, new int[]{}),
+            Arguments.of(null, new int[]{})
         );
     }
 }
