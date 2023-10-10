@@ -13,8 +13,8 @@ public class VideoLength {
         }
 
         String[] minAndSec = rawVideoLength.split(":");
-        final int minutes = Integer.parseInt(minAndSec[0]);
-        final int seconds = Integer.parseInt(minAndSec[1]);
+        int minutes = Integer.parseInt(minAndSec[0]);
+        int seconds = Integer.parseInt(minAndSec[1]);
 
         return convertMinutesToSeconds(minutes) + seconds;
     }
