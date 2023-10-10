@@ -1,13 +1,11 @@
 package edu.hw1.task3;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Range {
     private final int leftBorder;
     private final int rightBorder;
 
-    public Range(int @NotNull [] array) {
-        if (array.length == 0) {
+    public Range(int[] array) {
+        if (array == null || array.length == 0) {
             throw new IllegalArgumentException();
         }
 

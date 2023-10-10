@@ -10,16 +10,16 @@ public class SpecificPalindrome {
     }
 
     public static boolean isPalindromeDescendant(int number) {
-        if (number < 0) {
-            return isPalindromeDescendant(Math.abs(number));
-        }
-        if (number < BASE_NUMBER) {
+        int numberCopy = Math.abs(number);
+
+        if (numberCopy < BASE_NUMBER) {
             return false;
         }
-        if (!hasEvenLength(number)) {
-            return isPalindrome(number);
+
+        if (!hasEvenLength(numberCopy)) {
+            return isPalindrome(numberCopy);
         }
-        return isPalindrome(number) || isPalindromeDescendant(findDescendant(number));
+        return isPalindrome(numberCopy) || isPalindromeDescendant(findDescendant(numberCopy));
     }
 
     private static boolean isPalindrome(int number) {

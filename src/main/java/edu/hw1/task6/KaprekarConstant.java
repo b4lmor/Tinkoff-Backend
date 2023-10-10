@@ -14,7 +14,7 @@ public class KaprekarConstant {
     }
 
     public static int countK(int number) {
-        if (!isNumberValid(number)) {
+        if (isNotValidNumber(number)) {
             throw new IllegalArgumentException();
         }
 
@@ -58,14 +58,14 @@ public class KaprekarConstant {
         return true;
     }
 
-    private static boolean isNumberValid(int number) {
+    private static boolean isNotValidNumber(int number) {
         if (number < MIN_VALUE_FOR_COUNTK_FUNCTION || number > MAX_VALUE_FOR_COUNTK_FUNCTION) {
-            return false;
+            return true;
         }
         if (allDigitsSame(number)) {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     private static int countKValid(int number) {

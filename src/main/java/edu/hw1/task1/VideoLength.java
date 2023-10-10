@@ -1,7 +1,5 @@
 package edu.hw1.task1;
 
-import org.jetbrains.annotations.NotNull;
-
 public class VideoLength {
     private static final String RAW_VIDEO_LENGTH_REGEX_PATTERN = "\\d+:[0-5][0-9]";
     private static final int SECONDS_IN_MINUTE = 60;
@@ -9,8 +7,8 @@ public class VideoLength {
     private VideoLength() {
     }
 
-    public static int minutesToSeconds(@NotNull String rawVideoLength) {
-        if (!isValidRawVideoLength(rawVideoLength)) {
+    public static int minutesToSeconds(String rawVideoLength) {
+        if (isNotValidRawVideoLength(rawVideoLength)) {
             throw new IllegalArgumentException();
         }
 
@@ -21,8 +19,9 @@ public class VideoLength {
         return convertMinutesToSeconds(minutes) + seconds;
     }
 
-    private static boolean isValidRawVideoLength(String rawVideoLength) {
-        return rawVideoLength.matches(RAW_VIDEO_LENGTH_REGEX_PATTERN);
+    private static boolean isNotValidRawVideoLength(String rawVideoLength) {
+        return rawVideoLength == null
+            || !rawVideoLength.matches(RAW_VIDEO_LENGTH_REGEX_PATTERN);
     }
 
     private static int convertMinutesToSeconds(int minutes) {

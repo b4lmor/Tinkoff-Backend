@@ -1,13 +1,15 @@
 package edu.hw1.task4;
 
-import org.jetbrains.annotations.NotNull;
-
 public class StringFixer {
 
     private StringFixer() {
     }
 
-    public static String fixString(@NotNull String brokenString) {
+    public static String fixString(String brokenString) {
+        if (brokenString == null) {
+            throw new IllegalArgumentException();
+        }
+
         if (brokenString.length() <= 1) {
             return brokenString;
         }
