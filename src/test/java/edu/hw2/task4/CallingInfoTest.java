@@ -39,9 +39,9 @@ public class ExprTest {
     @Test
     @DisplayName("Evaluate expression my test #2")
     void testMyExpression2() {
-        var zero = new Constant(0); // 0
-        var negZero = new Negate(0); // 0
-        var res = new Exponent(zero, negZero); // 0^0 in Java == 1
+        var zero1 = new Constant(0); // 0
+        var zero2 = new Negate(0); // 0
+        var res = new Exponent(zero1, zero2); // 0^0 in Java == 1
 
         var resEval = res.evaluate();
 
