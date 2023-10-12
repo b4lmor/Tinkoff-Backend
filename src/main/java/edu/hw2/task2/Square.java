@@ -2,7 +2,7 @@ package edu.hw2.task2;
 
 public class Square extends Rectangle {
     @Override
-    Rectangle setWidth(int w) {
+    public Rectangle setWidth(int w) {
         if (w == this.height) {
             return this;
         }
@@ -12,7 +12,7 @@ public class Square extends Rectangle {
     }
 
     @Override
-    Rectangle setHeight(int h) {
+    public Rectangle setHeight(int h) {
         if (h == this.width) {
             return this;
         }
@@ -21,7 +21,7 @@ public class Square extends Rectangle {
             .setWidth(this.width);
     }
 
-    void resize(int side) {
+    public void resize(int side) {
         this.height = side;
         this.width = side;
     }

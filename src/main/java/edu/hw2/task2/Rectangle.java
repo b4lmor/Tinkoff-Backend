@@ -4,17 +4,17 @@ public class Rectangle {
     protected int width = 0;
     protected int height = 0;
 
-    Rectangle setWidth(int width) {
+    public Rectangle setWidth(int width) {
         this.width = width;
         return this;
     }
 
-    Rectangle setHeight(int height) {
+    public Rectangle setHeight(int height) {
         this.height = height;
         return this;
     }
 
-    double calculateArea() {
+    public double calculateArea() {
         return width * height;
     }
 }
