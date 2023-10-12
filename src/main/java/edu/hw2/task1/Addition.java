@@ -15,6 +15,7 @@ public record Addition(
     public Addition(double neg1, double neg2) {
         this(new Constant(neg1), new Constant(neg2));
     }
+
     @Override
     public double evaluate() {
         return a1.evaluate() + a2.evaluate();

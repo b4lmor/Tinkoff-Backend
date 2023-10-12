@@ -15,6 +15,7 @@ public record Multiplication(
     public Multiplication(double neg1, double neg2) {
         this(new Constant(neg1), new Constant(neg2));
     }
+
     @Override
     public double evaluate() {
         return m1.evaluate() * m2.evaluate();

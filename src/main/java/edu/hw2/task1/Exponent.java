@@ -15,6 +15,7 @@ public record Exponent(
     public Exponent(double neg1, double neg2) {
         this(new Constant(neg1), new Constant(neg2));
     }
+
     @Override
     public double evaluate() {
         return Math.pow(e1.evaluate(), e2.evaluate());
