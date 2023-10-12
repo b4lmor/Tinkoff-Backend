@@ -1,51 +1,20 @@
-package edu.hw2.task1;
+package edu.hw2.task4;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class ExprTest {
+public class CallingInfoTest {
     @Test
-    @DisplayName("Evaluate expression from task example")
+    @DisplayName("Who called the function?")
     void testTaskExample() {
-        var two = new Constant(2); // 2
-        var four = new Constant(4); // 4
-        var negOne = new Negate(new Constant(1)); // -1
-        var sumTwoFour = new Addition(two, four); // 6
-        var mult = new Multiplication(sumTwoFour, negOne); // -6
-        var exp = new Exponent(mult, 2); // 36
-        var res = new Addition(exp, new Constant(1)); // 37
+        var callingInfo = CallingInfo.callingInfo();
 
-        var resEval = res.evaluate();
+        assertThat(callingInfo.className())
+            .isEqualTo("edu.hw2.task4.CallingInfoTest");
 
-        assertThat(resEval)
-            .isEqualTo(37);
+        assertThat(callingInfo.methodName())
+            .isEqualTo("testTaskExample");
     }
 
-    @Test
-    @DisplayName("Evaluate expression my test #1")
-    void testMyExpression1() {
-        var two = new Constant(2); // 2
-        var negTwo = new Negate(two); // -2
-        var negNegTwo = new Negate(negTwo); // 2
-        var res = new Exponent(negTwo, negNegTwo); // 4
-
-        var resEval = res.evaluate();
-
-        assertThat(resEval)
-            .isEqualTo(4);
-    }
-
-    @Test
-    @DisplayName("Evaluate expression my test #2")
-    void testMyExpression2() {
-        var zero1 = new Constant(0); // 0
-        var zero2 = new Negate(0); // 0
-        var res = new Exponent(zero1, zero2); // 0^0 in Java == 1
-
-        var resEval = res.evaluate();
-
-        assertThat(resEval)
-            .isEqualTo(1);
-    }
 }
