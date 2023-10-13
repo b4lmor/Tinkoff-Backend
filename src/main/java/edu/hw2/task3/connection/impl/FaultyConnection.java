@@ -2,8 +2,8 @@ package edu.hw2.task3.connection.impl;
 
 import edu.hw2.task3.connection.IConnection;
 import edu.hw2.task3.exception.ConnectionException;
-import java.time.LocalDate;
 import java.time.DayOfWeek;
+import java.time.LocalDate;
 
 public class FaultyConnection implements IConnection {
     @Override
