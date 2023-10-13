@@ -12,4 +12,8 @@ public record Constant(
         return c;
     }
 
+    @Override
+    public String toString() {
+        return "= " + c;
+    }
 }

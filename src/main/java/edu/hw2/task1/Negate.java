@@ -1,7 +1,7 @@
 package edu.hw2.task1;
 
 public record Negate(
-    Expr n1
+    Expr n
 ) implements Expr {
 
     public Negate(double neg) {
@@ -10,11 +10,11 @@ public record Negate(
 
     @Override
     public double evaluate() {
-        return -(n1.evaluate());
+        return -(n.evaluate());
     }
 
     @Override
     public String toString() {
-        return String.valueOf(this.evaluate());
+        return "= -1 * " + n.evaluate();
     }
 }

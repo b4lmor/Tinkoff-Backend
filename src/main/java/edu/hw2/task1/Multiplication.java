@@ -21,4 +21,8 @@ public record Multiplication(
         return m1.evaluate() * m2.evaluate();
     }
 
+    @Override
+    public String toString() {
+        return "= " + m1.evaluate() + " * " + m2.evaluate();
+    }
 }

@@ -21,4 +21,8 @@ public record Addition(
         return a1.evaluate() + a2.evaluate();
     }
 
+    @Override
+    public String toString() {
+        return "= " + a1.evaluate() + " + " + a2.evaluate();
+    }
 }

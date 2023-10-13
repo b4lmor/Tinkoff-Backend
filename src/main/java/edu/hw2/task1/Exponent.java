@@ -21,4 +21,8 @@ public record Exponent(
         return Math.pow(e1.evaluate(), e2.evaluate());
     }
 
+    @Override
+    public String toString() {
+        return "= " + e1.evaluate() + "^" + e2.evaluate();
+    }
 }
