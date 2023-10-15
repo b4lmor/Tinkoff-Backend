@@ -1,0 +1,20 @@
+{
+    "words": [
+        {
+            "word": "football",
+            "difficulty": 1
+        },
+        {
+            "word": "hockey",
+            "difficulty": 3
+        },
+        {
+            "word": "curling",
+            "difficulty": 8
+        },
+        {
+            "word": "surfing",
+            "difficulty": 5
+        }
+    ]
+}

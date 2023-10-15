@@ -1,0 +1,20 @@
+{
+    "words": [
+        {
+            "word": "apple",
+            "difficulty": 1
+        },
+        {
+            "word": "steak",
+            "difficulty": 3
+        },
+        {
+            "word": "croissant",
+            "difficulty": 8
+        },
+        {
+            "word": "cheese",
+            "difficulty": 5
+        }
+    ]
+}
