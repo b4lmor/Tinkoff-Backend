@@ -22,7 +22,6 @@ public class MyScanner {
 
     public static void changeInput(File input) {
         try {
-            scanner.close();
             scanner = new Scanner(input);
         } catch (FileNotFoundException e) {
             LOGGER.info("can't open the scenario.");
