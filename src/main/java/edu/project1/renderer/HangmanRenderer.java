@@ -3,6 +3,7 @@ package edu.project1.renderer;
 import edu.project1.session.Session;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 
 public class HangmanRenderer {
     private final static int DIFFICULTY_STAR_LENGTH = 10;
@@ -13,7 +14,7 @@ public class HangmanRenderer {
     protected HangmanRenderer() {
     }
 
-    public static void renderMessage(String message) {
+    public static void renderMessage(@NotNull String message) {
         LOGGER.info(message);
     }
 

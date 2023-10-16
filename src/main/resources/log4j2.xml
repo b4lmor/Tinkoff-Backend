@@ -13,6 +13,9 @@
                 pattern="%d{HH:mm:ss.SSS} %highlight{%-5p} [%-15.15thread] %-15.15logger{20} -- %highlight{%m}%n"
             />
         </Console>
+        <File name="file" fileName="src/main/resources/logger.log" append="false">
+            <PatternLayout pattern="%d [%t] %-5p %c - %m%n"/>
+        </File>
     </Appenders>
 
     <Loggers>
@@ -25,6 +28,7 @@
 
         <Root level="INFO">
             <AppenderRef ref="STDOUT_PLAIN"/>
+            <AppenderRef ref="file"/>
         </Root>
     </Loggers>
 </Configuration>

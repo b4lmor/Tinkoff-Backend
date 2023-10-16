@@ -11,14 +11,14 @@ public class DictionaryFactory {
     private DictionaryFactory() {
     }
 
-    public static ADictionary getDictionaryByTopic(Topic topic) throws IOException {
+    public static AbstractDictionary getDictionaryByTopic(Topic topic) throws IOException {
         return switch (topic) {
             case SPORT -> new SportDictionary();
             case FOOD -> new FoodDictionary();
         };
     }
 
-    public static ADictionary getDictionaryByInput() throws IOException {
+    public static AbstractDictionary getDictionaryByInput() throws IOException {
         Topic topic = MyScanner.askForTopicPersistently();
         return DictionaryFactory.getDictionaryByTopic(topic);
     }

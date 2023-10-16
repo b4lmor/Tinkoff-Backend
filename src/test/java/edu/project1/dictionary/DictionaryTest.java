@@ -1,15 +1,21 @@
 package edu.project1.dictionary;
 
-import edu.project1.entity.word.WordEntity;
+import edu.project1.entity.WordEntity;
 import edu.project1.enums.Topic;
+import edu.project1.scanner.MyScanner;
+import edu.project1.utils.FileUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import java.io.File;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class DictionaryTest {
+    private static final String SCENARIO_PATH = "src/main/resources/hangman/screenplay/scenario.txt";
 
     private static Stream<Arguments> provideTopics() {
         return Stream.of(
@@ -21,12 +27,37 @@ public class DictionaryTest {
     @ParameterizedTest
     @MethodSource("provideTopics")
     @DisplayName("Test Dictionary")
-    void testDictionary(Topic topic) {
+    void testDictionaryByTopic(Topic topic) {
 
         Assertions.assertDoesNotThrow(() -> {
-            ADictionary dictionary = DictionaryFactory.getDictionaryByTopic(topic);
+            AbstractDictionary dictionary = DictionaryFactory.getDictionaryByTopic(topic);
             WordEntity wordEntity = dictionary.pickRandomWord();
         });
 
+    }
+
+    private static Stream<Arguments> provideInputs() {
+        return Stream.of(
+            Arguments.of(List.of("1")),
+            Arguments.of(Arrays.asList("0", "-11", "abc", "1")),
+            Arguments.of(Arrays.asList("0", "-11", "abc", "2"))
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideInputs")
+    @DisplayName("Test Dictionary")
+    void testDictionaryByInput(List<String> scenarioLines) {
+
+        FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
+
+        MyScanner.changeInput(new File(SCENARIO_PATH));
+
+        Assertions.assertDoesNotThrow(() -> {
+            AbstractDictionary dictionary = DictionaryFactory.getDictionaryByInput();
+            WordEntity wordEntity = dictionary.pickRandomWord();
+        });
+
+        MyScanner.setDefaultInput();
     }
 }

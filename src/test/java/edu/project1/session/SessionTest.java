@@ -1,56 +1,118 @@
 package edu.project1.session;
 
+import edu.project1.entity.WordEntity;
+import edu.project1.scanner.MyScanner;
+import edu.project1.utils.FileUtil;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static edu.project1.game.GameProperties.MAX_ATTEMPTS;
-import static org.junit.jupiter.api.Assertions.*;
+import java.io.File;
+import java.util.Arrays;
+import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static edu.project1.game.GameProperties.STOP_WORD;
 
 public class SessionTest {
+    private static final String SCENARIO_PATH = "src/main/resources/hangman/screenplay/scenario.txt";
 
     @Test
-    @DisplayName("Test Session Guessing")
-    void TestSessionGuessing() {
-        String answer = "test";
+    @DisplayName("Test Session Successful guessing")
+    void testSessionSuccessfulGuessing() {
+        WordEntity answer = new WordEntity("test", 10);
+
+        List<String> scenarioLines = Arrays.asList("a", "b", "t", "e", "s", "n");
+        FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
+
+        MyScanner.changeInput(new File(SCENARIO_PATH));
+
         Session session = new Session(answer);
 
-        int attempts0 = session.getAttempts();
+        for (String scenarioLine : scenarioLines) {
 
-        session.makeGuess('t');
+            if (session.isGameFinished()) {
+                break;
+            }
 
-        int attempts1 = session.getAttempts();
+            session.makeGuess();
 
-        assertTrue(session.isLetterUsed('t'));
-        assertEquals(attempts0, attempts1);
+            if (scenarioLine.length() == 1 && Character.isAlphabetic(scenarioLine.charAt(0))) {
+                assertTrue(session.isLetterUsed(
+                    scenarioLine.charAt(0)
+                ));
 
-        session.makeGuess('t');
-
-        int attempts2 = session.getAttempts();
-
-        assertEquals(attempts0, attempts2);
-
-        session.makeGuess('o');
-
-        int attempts3 = session.getAttempts();
-
-        assertNotEquals(attempts0, attempts3);
-
-        session.makeGuess('e');
-        session.makeGuess('s');
+            } else {
+                assertFalse(session.isLetterUsed(
+                    scenarioLine.charAt(0)
+                ));
+            }
+        }
 
         assertTrue(session.isAnswerGuessed());
 
+        MyScanner.setDefaultInput();
     }
 
     @Test
-    @DisplayName("Test Session 'Give up'")
-    void TestSessionGiveUp() {
-        String answer = "test";
+    @DisplayName("Test Session Failed guessing")
+    void testSessionFailedGuessing() {
+        WordEntity answer = new WordEntity("test", 10);
+
+        List<String> scenarioLines = Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
+        FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
+
+        MyScanner.changeInput(new File(SCENARIO_PATH));
+
         Session session = new Session(answer);
 
-        session.giveUp();
+        for (String scenarioLine : scenarioLines) {
 
-        int attempts = session.getAttempts();
+            if (session.isGameFinished()) {
+                break;
+            }
 
-        assertEquals(attempts, MAX_ATTEMPTS);
+            session.makeGuess();
+
+            if (scenarioLine.length() == 1 && Character.isAlphabetic(scenarioLine.charAt(0))) {
+                assertTrue(session.isLetterUsed(
+                    scenarioLine.charAt(0)
+                ));
+
+            } else {
+                assertFalse(session.isLetterUsed(
+                    scenarioLine.charAt(0)
+                ));
+            }
+        }
+
+        assertFalse(session.isAnswerGuessed());
+
+        MyScanner.setDefaultInput();
+    }
+
+    @Test
+    @DisplayName("Test Session '!stop' command")
+    void testSessionStopCommand() {
+        WordEntity answer = new WordEntity("test", 10);
+
+        List<String> scenarioLines = Arrays.asList("a", "b", "c", "d", STOP_WORD, "f", "g", "h", "i", "j");
+        FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
+
+        MyScanner.changeInput(new File(SCENARIO_PATH));
+
+        Session session = new Session(answer);
+
+        for (String scenarioLine : scenarioLines) {
+
+            session.makeGuess();
+
+            if (scenarioLine.equals(STOP_WORD)) {
+                assertTrue(session.isGameFinished());
+            }
+
+        }
+
+        assertTrue(session.isGameFinished());
+
+        MyScanner.setDefaultInput();
     }
 }

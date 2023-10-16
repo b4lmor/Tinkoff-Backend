@@ -1,4 +1,4 @@
-package edu.project1.entity.word;
+package edu.project1.entity;
 
 public record WordEntity(
     String word,

@@ -1,0 +1,772 @@
+2023-10-17 00:17:36,409 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,415 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,415 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,463 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,463 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,463 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,464 [main] INFO  edu.project1.renderer.HangmanRenderer - Send a topic number.
+2023-10-17 00:17:36,465 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,465 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,465 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,466 [main] INFO  edu.project1.renderer.HangmanRenderer - Send a topic number.
+2023-10-17 00:17:36,466 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,466 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,466 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,467 [main] INFO  edu.project1.renderer.HangmanRenderer - Send a topic number.
+2023-10-17 00:17:36,467 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,467 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,468 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,478 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,478 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,479 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,479 [main] INFO  edu.project1.renderer.HangmanRenderer - Send a topic number.
+2023-10-17 00:17:36,480 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,480 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,480 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,480 [main] INFO  edu.project1.renderer.HangmanRenderer - Send a topic number.
+2023-10-17 00:17:36,481 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,481 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,481 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,481 [main] INFO  edu.project1.renderer.HangmanRenderer - Send a topic number.
+2023-10-17 00:17:36,482 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,482 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,482 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,511 [main] INFO  edu.project1.renderer.HangmanRenderer - We're going to start! If you want to stop the game, send '!stop'.
+2023-10-17 00:17:36,512 [main] INFO  edu.project1.renderer.HangmanRenderer - Difficulty of the word: ★★★★★★★★★★
+2023-10-17 00:17:36,513 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,514 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,514 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,514 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,514 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,515 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,515 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,515 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,516 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,516 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,518 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,518 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,518 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,519 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,519 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,519 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,519 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,520 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,520 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,520 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,520 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,521 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,521 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,521 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,521 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,521 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,521 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,521 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,522 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,523 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,523 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,523 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,523 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,524 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,524 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,524 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,524 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,524 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: t☐☐t
+2023-10-17 00:17:36,525 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e f g h i j k l m n o p q r s t̶ u v w x y z 
+2023-10-17 00:17:36,525 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,525 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,525 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,525 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,526 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,526 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,526 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,526 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,526 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: te☐t
+2023-10-17 00:17:36,526 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e̶ f g h i j k l m n o p q r s t̶ u v w x y z 
+2023-10-17 00:17:36,527 [main] INFO  edu.project1.renderer.HangmanRenderer - You won! Congratulations!
+2023-10-17 00:17:36,527 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,527 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,527 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,527 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,528 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,528 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,528 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,529 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: test
+2023-10-17 00:17:36,529 [main] INFO  edu.project1.renderer.HangmanRenderer - You won! Congratulations!
+2023-10-17 00:17:36,534 [main] INFO  edu.project1.renderer.HangmanRenderer - We're going to start! If you want to stop the game, send '!stop'.
+2023-10-17 00:17:36,534 [main] INFO  edu.project1.renderer.HangmanRenderer - Difficulty of the word: ★★★★★★★★★★
+2023-10-17 00:17:36,535 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,535 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,535 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,535 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,535 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,535 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,535 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,536 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,536 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,536 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,536 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,537 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,537 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,537 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,537 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,537 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,537 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,537 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,538 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,538 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,538 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,538 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,538 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,539 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,539 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,539 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,539 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,539 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,540 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,540 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,540 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,540 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,541 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,541 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|   |
+2023-10-17 00:17:36,541 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,541 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,541 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,541 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,542 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,542 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,542 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,542 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,543 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,543 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,543 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,543 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,543 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,543 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,544 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,544 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,544 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,544 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,545 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,545 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,545 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,545 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,545 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,545 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: test
+2023-10-17 00:17:36,546 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,546 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,546 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,546 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,546 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,546 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,546 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,546 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,547 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: test
+2023-10-17 00:17:36,547 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,547 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,547 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,547 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,547 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,548 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,548 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,548 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,548 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: test
+2023-10-17 00:17:36,548 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,549 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,549 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,549 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,549 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,549 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,549 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,550 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,550 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: test
+2023-10-17 00:17:36,550 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,550 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,550 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,550 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,551 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,551 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,551 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,551 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,551 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: test
+2023-10-17 00:17:36,551 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,552 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,552 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,552 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,552 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,552 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,553 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,553 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,553 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: test
+2023-10-17 00:17:36,553 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,553 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,554 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,554 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,554 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,554 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,554 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,554 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,555 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: test
+2023-10-17 00:17:36,555 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,561 [main] INFO  edu.project1.renderer.HangmanRenderer - We're going to start! If you want to stop the game, send '!stop'.
+2023-10-17 00:17:36,561 [main] INFO  edu.project1.renderer.HangmanRenderer - Difficulty of the word: ★★★★★★★★★★
+2023-10-17 00:17:36,561 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,561 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,562 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,562 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,562 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,562 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,562 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,563 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,563 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,563 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,564 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,564 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,564 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,564 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,564 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,564 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,564 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,565 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,565 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,565 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,565 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,565 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,566 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,566 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,566 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,566 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,566 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,566 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,567 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,567 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,567 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,567 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,567 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,568 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|   |
+2023-10-17 00:17:36,568 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,568 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,568 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,568 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,568 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,569 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,569 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,569 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,569 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,569 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,570 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,570 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,571 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,571 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐
+2023-10-17 00:17:36,571 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,571 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,572 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,572 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,572 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,572 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,572 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,573 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,573 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,573 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐e☐☐
+2023-10-17 00:17:36,573 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,573 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,574 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,574 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,574 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,574 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,574 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,574 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,575 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,575 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐e☐☐
+2023-10-17 00:17:36,575 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,575 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,575 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,576 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,576 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,576 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,576 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,576 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,576 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,577 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: test
+2023-10-17 00:17:36,577 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,588 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,588 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,589 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,589 [main] INFO  edu.project1.renderer.HangmanRenderer - Send a topic number.
+2023-10-17 00:17:36,589 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,589 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,590 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,590 [main] INFO  edu.project1.renderer.HangmanRenderer - Send a topic number.
+2023-10-17 00:17:36,590 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,590 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,590 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,591 [main] INFO  edu.project1.renderer.HangmanRenderer - We're going to start! If you want to stop the game, send '!stop'.
+2023-10-17 00:17:36,591 [main] INFO  edu.project1.renderer.HangmanRenderer - Difficulty of the word: ★★★★★★★★☆☆
+2023-10-17 00:17:36,591 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,592 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,592 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,592 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,592 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,592 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,592 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,593 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,593 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,593 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,593 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,593 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,593 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,593 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,594 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,594 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,594 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,594 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,595 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,595 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,595 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,595 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,595 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,596 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,596 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,596 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,596 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,596 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,596 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,597 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,597 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,597 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,597 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,597 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,598 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,598 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,598 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,598 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐☐
+2023-10-17 00:17:36,598 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,599 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,599 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,599 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,599 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,599 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|   |
+2023-10-17 00:17:36,599 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,599 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,600 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,600 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐☐
+2023-10-17 00:17:36,600 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,600 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,601 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,601 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,601 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,601 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,601 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,602 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,602 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,602 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐☐
+2023-10-17 00:17:36,602 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,603 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,603 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,603 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,603 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,603 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,603 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,604 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,604 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,604 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐☐
+2023-10-17 00:17:36,604 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,604 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,605 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,605 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,605 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,605 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,605 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,605 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,605 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,606 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐g
+2023-10-17 00:17:36,606 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g̶ h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,606 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,606 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,606 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,606 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,607 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,607 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,607 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,607 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,607 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: curling
+2023-10-17 00:17:36,607 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,608 [main] INFO  edu.project1.renderer.HangmanRenderer - Do you wanna play again? (Y / n)
+2023-10-17 00:17:36,608 [main] INFO  edu.project1.renderer.HangmanRenderer - You can change the topic if you want. (Y / n)
+2023-10-17 00:17:36,608 [main] INFO  edu.project1.renderer.HangmanRenderer - We're going to start! If you want to stop the game, send '!stop'.
+2023-10-17 00:17:36,608 [main] INFO  edu.project1.renderer.HangmanRenderer - Difficulty of the word: ★★★★★☆☆☆☆☆
+2023-10-17 00:17:36,608 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,609 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,609 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,609 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,609 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,609 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,610 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,610 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,610 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,610 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,611 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,611 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,611 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,611 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,612 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,612 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,612 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,612 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,612 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,613 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,613 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,613 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,613 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,613 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,613 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,613 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,614 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,614 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,614 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,614 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,614 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,614 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,615 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,615 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|   |
+2023-10-17 00:17:36,615 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,615 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,615 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,615 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,615 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,615 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,615 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,616 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,616 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,616 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,616 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,616 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,616 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,616 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,616 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,616 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,617 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,617 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,617 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,617 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,617 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,617 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,618 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,618 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,618 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,618 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,618 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,618 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,619 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,619 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,619 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,619 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,619 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,619 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐f☐☐☐
+2023-10-17 00:17:36,620 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,620 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,620 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,620 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,620 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,620 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,621 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,621 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,621 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,621 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐f☐☐g
+2023-10-17 00:17:36,621 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g̶ h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,621 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,621 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,621 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,621 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,622 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,622 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,622 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,622 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,622 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: surfing
+2023-10-17 00:17:36,622 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,622 [main] INFO  edu.project1.renderer.HangmanRenderer - Do you wanna play again? (Y / n)
+2023-10-17 00:17:36,628 [main] INFO  edu.project1.renderer.HangmanRenderer - We're going to start! If you want to stop the game, send '!stop'.
+2023-10-17 00:17:36,629 [main] INFO  edu.project1.renderer.HangmanRenderer - Difficulty of the word: ★★★★★☆☆☆☆☆
+2023-10-17 00:17:36,629 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,629 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,629 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,629 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,629 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,629 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,629 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,630 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,630 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,630 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, send a letter that you haven't used yet.
+2023-10-17 00:17:36,630 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, send a letter that you haven't used yet.
+2023-10-17 00:17:36,630 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, send a letter that you haven't used yet.
+2023-10-17 00:17:36,630 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,630 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,631 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,631 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,631 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,631 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,631 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,631 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,631 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,631 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,631 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,632 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,632 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,632 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,632 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,632 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,632 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,633 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,633 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,633 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,633 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,633 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,633 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,633 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,634 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|   |
+2023-10-17 00:17:36,634 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,634 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,634 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,634 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,634 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,635 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,635 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,635 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,635 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,635 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,635 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,635 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,636 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,636 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,636 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,636 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,636 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,636 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,636 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,637 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,637 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,637 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,637 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,637 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐
+2023-10-17 00:17:36,637 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,637 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,638 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,638 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,638 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,638 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,638 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,638 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,638 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,638 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐f☐☐☐
+2023-10-17 00:17:36,639 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,639 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,639 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,639 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,639 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,639 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,639 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐f☐☐g
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g̶ h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,640 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,641 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,641 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: surfing
+2023-10-17 00:17:36,641 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,641 [main] INFO  edu.project1.renderer.HangmanRenderer - Do you wanna play again? (Y / n)
+2023-10-17 00:17:36,641 [main] INFO  edu.project1.renderer.HangmanRenderer - You can change the topic if you want. (Y / n)
+2023-10-17 00:17:36,641 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, choose a topic for a game! (send a number)
+2023-10-17 00:17:36,641 [main] INFO  edu.project1.renderer.HangmanRenderer - 1. SPORT
+2023-10-17 00:17:36,641 [main] INFO  edu.project1.renderer.HangmanRenderer - 2. FOOD
+2023-10-17 00:17:36,642 [main] INFO  edu.project1.renderer.HangmanRenderer - We're going to start! If you want to stop the game, send '!stop'.
+2023-10-17 00:17:36,642 [main] INFO  edu.project1.renderer.HangmanRenderer - Difficulty of the word: ★★★★★★★★☆☆
+2023-10-17 00:17:36,642 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,642 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,642 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,642 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,642 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,642 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,642 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐☐☐☐
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,643 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐a☐☐
+2023-10-17 00:17:36,644 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,644 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,644 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,644 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,644 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,645 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,645 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,645 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,645 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,645 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐☐a☐☐
+2023-10-17 00:17:36,645 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,646 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,646 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,646 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,646 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,646 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,646 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,646 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,646 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,646 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐a☐☐
+2023-10-17 00:17:36,647 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,647 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,647 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,647 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,647 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,647 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,647 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,647 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,647 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐a☐☐
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|   |
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,648 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,649 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐a☐☐
+2023-10-17 00:17:36,649 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,649 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,649 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,649 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,649 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,649 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,649 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,650 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,650 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,650 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐a☐☐
+2023-10-17 00:17:36,650 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,650 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,650 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,650 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,651 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,651 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,651 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,651 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,651 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,651 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: c☐☐☐☐☐a☐☐
+2023-10-17 00:17:36,651 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g̶ h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,651 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,652 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,652 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,652 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,652 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,652 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,652 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,652 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,652 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: croissant
+2023-10-17 00:17:36,653 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,653 [main] INFO  edu.project1.renderer.HangmanRenderer - Do you wanna play again? (Y / n)
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer - We're going to start! If you want to stop the game, send '!stop'.
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer - Difficulty of the word: ★★★☆☆☆☆☆☆☆
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐☐☐
+2023-10-17 00:17:36,658 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, send a letter that you haven't used yet.
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, send a letter that you haven't used yet.
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer - Please, send a letter that you haven't used yet.
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,659 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐a☐
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,660 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐a☐
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,661 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐a☐
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|   |
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,662 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐☐a☐
+2023-10-17 00:17:36,663 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,663 [main] INFO  edu.project1.renderer.HangmanRenderer - right!
+2023-10-17 00:17:36,663 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,663 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,663 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,663 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|   |
+2023-10-17 00:17:36,663 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,663 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,663 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐ea☐
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,664 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐ea☐
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer - Oops, this time you were wrong!
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer -  /    |
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer - The word: ☐☐ea☐
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer - Available letters: a̶ b̶ c̶ d̶ e̶ f̶ g̶ h i j k l m n o p q r s t u v w x y z 
+2023-10-17 00:17:36,665 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer -   +---+
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer -   |   |
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer -   O   |
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer -  /|\  |
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer -  / \  |
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer -       |
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer - =========
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer - the word: steak
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer - Game over! You lost, the stick-guy is dead because of you :(
+2023-10-17 00:17:36,666 [main] INFO  edu.project1.renderer.HangmanRenderer - Do you wanna play again? (Y / n)

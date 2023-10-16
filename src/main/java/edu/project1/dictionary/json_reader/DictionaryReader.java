@@ -1,6 +1,6 @@
 package edu.project1.dictionary.json_reader;
 
-import edu.project1.entity.word.WordEntity;
+import edu.project1.entity.WordEntity;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

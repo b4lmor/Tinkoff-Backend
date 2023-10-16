@@ -1,9 +1,9 @@
 package edu.project1.dictionary.dicts;
 
-import edu.project1.dictionary.ADictionary;
+import edu.project1.dictionary.AbstractDictionary;
 import java.io.IOException;
 
-public class SportDictionary extends ADictionary {
+public class SportDictionary extends AbstractDictionary {
     private static final String SPORT_DICTIONARY_FILE_PATH =
         "src/main/resources/hangman/dicts/sport_dict.json";
 

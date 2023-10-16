@@ -3,16 +3,35 @@ package edu.project1.scanner;
 import edu.project1.enums.Topic;
 import edu.project1.renderer.HangmanRenderer;
 import edu.project1.session.Session;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import static edu.project1.game.GameProperties.ASK_FOR_TOPIC;
 import static edu.project1.game.GameProperties.BAD_LETTER_INPUT_MESSAGE;
 import static edu.project1.game.GameProperties.BAD_TOPIC_INPUT_MESSAGE;
 import static edu.project1.game.GameProperties.STOP_WORD;
 
 public class MyScanner {
-    private static final Scanner SCANNER = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
+    private final static Logger LOGGER = LogManager.getLogger();
 
     private MyScanner() {
+    }
+
+    public static void changeInput(File input) {
+        try {
+            scanner.close();
+            scanner = new Scanner(input);
+        } catch (FileNotFoundException e) {
+            LOGGER.info("can't open the scenario.");
+        }
+    }
+
+    public static void setDefaultInput() {
+        scanner.close();
+        scanner = new Scanner(System.in);
     }
 
     public static Topic askForTopicPersistently() {
@@ -27,7 +46,7 @@ public class MyScanner {
 
     public static boolean isAnswerYes() {
         while (true) {
-            String input = SCANNER.next();
+            String input = scanner.next();
 
             if (input.length() != 1) {
                 continue;
@@ -45,7 +64,7 @@ public class MyScanner {
 
     public static char scanInputGuessPersistently(Session session) {
         while (true) {
-            String input = SCANNER.next().toLowerCase();
+            String input = scanner.next().toLowerCase();
 
             if (isStopWord(input)) {
                 return '!';
@@ -72,7 +91,12 @@ public class MyScanner {
         HangmanRenderer.renderMessage(ASK_FOR_TOPIC);
         HangmanRenderer.renderEnum(Topic.class);
 
-        int number = SCANNER.nextInt();
+        String input = scanner.next();
+        if (!input.matches("\\d+")) {
+            throw new IllegalArgumentException();
+        }
+
+        int number = Integer.parseInt(input);
 
         return Topic.values()[number - 1];
     }
