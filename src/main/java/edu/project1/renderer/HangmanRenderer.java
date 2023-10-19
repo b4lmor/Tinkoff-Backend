@@ -6,25 +6,23 @@ import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 public class HangmanRenderer {
-    private final static int DIFFICULTY_STAR_LENGTH = 10;
-    private static final String LOWERCASE_LETTERS = "abcdefghijklmnopqrstuvwxyz";
-    private static final String CROSS_OUT_SYMBOL = "\u0336"; // "O" + "\u0336" = "O̶"
     private final static Logger LOGGER = LogManager.getLogger();
 
-    protected HangmanRenderer() {
-    }
+    private static final int DIFFICULTY_STAR_LENGTH = 10;
+    private static final String LOWERCASE_LETTERS = "abcdefghijklmnopqrstuvwxyz";
+    private static final String CROSS_OUT_SYMBOL = "\u0336"; // "O" + "\u0336" = "O̶"
 
-    public static void renderMessage(@NotNull String message) {
+    public void renderMessage(@NotNull String message) {
         LOGGER.info(message);
     }
 
-    public static void renderGreeting() {
+    public void renderGreeting() {
         for (var line : VisualData.HANGMAN_GREETING) {
             renderMessage(line);
         }
     }
 
-    public static void renderStage(int stage) {
+    public void renderStage(int stage) {
         if (stage < 0 || stage >= VisualData.HANGMAN_STAGES.length) {
             throw new IllegalArgumentException("Bad stage");
         }
@@ -34,7 +32,7 @@ public class HangmanRenderer {
         }
     }
 
-    public static <T extends Enum<T>> void renderEnum(Class<T> enumClass) {
+    public <T extends Enum<T>> void renderEnum(Class<T> enumClass) {
         T[] enumValues = enumClass.getEnumConstants();
         int n = 1;
         for (T value : enumValues) {
@@ -42,7 +40,7 @@ public class HangmanRenderer {
         }
     }
 
-    public static void renderWordDifficulty(int difficulty) {
+    public void renderWordDifficulty(int difficulty) {
         StringBuilder rating = new StringBuilder();
         for (int i = 0; i < DIFFICULTY_STAR_LENGTH; i++) {
             rating.append(i < difficulty ? "★" : "☆");
@@ -50,7 +48,7 @@ public class HangmanRenderer {
         renderMessage("Difficulty of the word: " + rating);
     }
 
-    public static void renderAlphabet(Session session) {
+    public void renderAlphabet(Session session) {
         StringBuilder alphabet = new StringBuilder();
         for (int i = 0; i < LOWERCASE_LETTERS.length(); i++) {
             char c = LOWERCASE_LETTERS.charAt(i);
@@ -64,7 +62,7 @@ public class HangmanRenderer {
         renderMessage("Available letters: " + alphabet);
     }
 
-    public static void renderHiddenAnswer(Session session, String answer) {
+    public void renderHiddenAnswer(Session session, String answer) {
         StringBuilder hiddenAnswer = new StringBuilder();
         for (int i = 0; i < answer.length(); i++) {
             char c = answer.charAt(i);

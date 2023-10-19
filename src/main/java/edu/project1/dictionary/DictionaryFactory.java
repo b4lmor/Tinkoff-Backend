@@ -7,6 +7,7 @@ import edu.project1.scanner.MyScanner;
 import java.io.IOException;
 
 public class DictionaryFactory {
+    private static final MyScanner SCANNER = new MyScanner();
 
     private DictionaryFactory() {
     }
@@ -19,7 +20,7 @@ public class DictionaryFactory {
     }
 
     public static AbstractDictionary getDictionaryByInput() throws IOException {
-        Topic topic = MyScanner.askForTopicPersistently();
+        Topic topic = SCANNER.askForTopicPersistently();
         return DictionaryFactory.getDictionaryByTopic(topic);
     }
 

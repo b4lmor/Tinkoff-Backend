@@ -11,6 +11,7 @@ import java.util.List;
 
 public class GameTest {
     private static final String SCENARIO_PATH = "src/main/resources/hangman/screenplay/scenario.txt";
+    private static final MyScanner myScanner = new MyScanner();
 
     @Test
     @DisplayName("Test Game Loosing Scenario")
@@ -23,11 +24,13 @@ public class GameTest {
 
         FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
 
-        MyScanner.changeInput(new File(SCENARIO_PATH));
+        myScanner.changeInput(new File(SCENARIO_PATH));
 
-        Assertions.assertDoesNotThrow(HangmanGame::runGame);
+        HangmanGame game = new HangmanGame();
 
-        MyScanner.setDefaultInput();
+        Assertions.assertDoesNotThrow(game::runGame);
+
+        myScanner.setDefaultInput();
     }
 
     @Test
@@ -44,11 +47,13 @@ public class GameTest {
 
         FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
 
-        MyScanner.changeInput(new File(SCENARIO_PATH));
+        myScanner.changeInput(new File(SCENARIO_PATH));
 
-        Assertions.assertDoesNotThrow(HangmanGame::runGame);
+        HangmanGame game = new HangmanGame();
 
-        MyScanner.setDefaultInput();
+        Assertions.assertDoesNotThrow(game::runGame);
+
+        myScanner.setDefaultInput();
     }
 
     @Test
@@ -66,10 +71,12 @@ public class GameTest {
 
         FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
 
-        MyScanner.changeInput(new File(SCENARIO_PATH));
+        myScanner.changeInput(new File(SCENARIO_PATH));
 
-        Assertions.assertDoesNotThrow(HangmanGame::runGame);
+        HangmanGame game = new HangmanGame();
 
-        MyScanner.setDefaultInput();
+        Assertions.assertDoesNotThrow(game::runGame);
+
+        myScanner.setDefaultInput();
     }
 }

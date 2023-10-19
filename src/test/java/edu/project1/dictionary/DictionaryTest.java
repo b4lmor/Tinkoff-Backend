@@ -16,6 +16,7 @@ import java.util.stream.Stream;
 
 public class DictionaryTest {
     private static final String SCENARIO_PATH = "src/main/resources/hangman/screenplay/scenario.txt";
+    private final MyScanner myScanner = new MyScanner();
 
     private static Stream<Arguments> provideTopics() {
         return Stream.of(
@@ -51,13 +52,13 @@ public class DictionaryTest {
 
         FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
 
-        MyScanner.changeInput(new File(SCENARIO_PATH));
+        myScanner.changeInput(new File(SCENARIO_PATH));
 
         Assertions.assertDoesNotThrow(() -> {
             AbstractDictionary dictionary = DictionaryFactory.getDictionaryByInput();
             WordEntity wordEntity = dictionary.pickRandomWord();
         });
 
-        MyScanner.setDefaultInput();
+        myScanner.setDefaultInput();
     }
 }

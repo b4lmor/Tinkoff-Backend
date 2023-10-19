@@ -8,6 +8,7 @@ import java.util.Random;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractDictionary {
+    private final Random random = new Random();
     private final List<WordEntity> words;
 
     protected AbstractDictionary(String dictPath) throws IOException {
@@ -19,8 +20,7 @@ public abstract class AbstractDictionary {
         return words.get(getRandomNumber(dictionarySize));
     }
 
-    private static int getRandomNumber(int n) {
-        Random random = new Random();
+    private int getRandomNumber(int n) {
         return random.nextInt(n);
     }
 }

@@ -3,47 +3,24 @@ package edu.project1.enums;
 import org.jetbrains.annotations.NotNull;
 
 public enum GuessResult implements GameStage {
-    WIN {
-        private static final String WIN_MESSAGE = "You won! Congratulations!";
+    WIN("You won! Congratulations!"),
 
-        @Override
-        public @NotNull String getMessage() {
-            return WIN_MESSAGE;
-        }
-    },
+    DEFEAT("Game over! You lost, the stick-guy is dead because of you :("),
 
-    DEFEAT {
-        private static final String DEFEAT_MESSAGE = "Game over! You lost, the stick-guy is dead because of you :(";
+    SUCCESSFUL_GUESS("right!"),
 
-        @Override
-        public @NotNull String getMessage() {
-            return DEFEAT_MESSAGE;
-        }
-    },
+    FAILED_GUESS("Oops, this time you were wrong!"),
 
-    SUCCESSFUL_GUESS {
-        private static final String SUCCESSFUL_GUESS_MESSAGE = "right!";
+    START_STAGE("");
 
-        @Override
-        public @NotNull String getMessage() {
-            return SUCCESSFUL_GUESS_MESSAGE;
-        }
-    },
+    private final String message;
 
-    FAILED_GUESS {
-        private static final String FAILED_GUESS_MESSAGE = "Oops, this time you were wrong!";
+    GuessResult(String message) {
+        this.message = message;
+    }
 
-        @Override
-        public @NotNull String getMessage() {
-            return FAILED_GUESS_MESSAGE;
-        }
-    },
-
-    START_STAGE {
-
-        @Override
-        public @NotNull String getMessage() {
-            return "";
-        }
+    @Override
+    public @NotNull String getMessage() {
+        return message;
     }
 }

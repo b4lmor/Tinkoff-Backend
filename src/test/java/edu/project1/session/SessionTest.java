@@ -14,6 +14,7 @@ import static edu.project1.game.GameProperties.STOP_WORD;
 
 public class SessionTest {
     private static final String SCENARIO_PATH = "src/main/resources/hangman/screenplay/scenario.txt";
+    private final MyScanner myScanner = new MyScanner();
 
     @Test
     @DisplayName("Test Session Successful guessing")
@@ -23,7 +24,7 @@ public class SessionTest {
         List<String> scenarioLines = Arrays.asList("a", "b", "t", "e", "s", "n");
         FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
 
-        MyScanner.changeInput(new File(SCENARIO_PATH));
+        myScanner.changeInput(new File(SCENARIO_PATH));
 
         Session session = new Session(answer);
 
@@ -49,7 +50,7 @@ public class SessionTest {
 
         assertTrue(session.isAnswerGuessed());
 
-        MyScanner.setDefaultInput();
+        myScanner.setDefaultInput();
     }
 
     @Test
@@ -60,7 +61,7 @@ public class SessionTest {
         List<String> scenarioLines = Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
         FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
 
-        MyScanner.changeInput(new File(SCENARIO_PATH));
+        myScanner.changeInput(new File(SCENARIO_PATH));
 
         Session session = new Session(answer);
 
@@ -86,7 +87,7 @@ public class SessionTest {
 
         assertFalse(session.isAnswerGuessed());
 
-        MyScanner.setDefaultInput();
+        myScanner.setDefaultInput();
     }
 
     @Test
@@ -97,7 +98,7 @@ public class SessionTest {
         List<String> scenarioLines = Arrays.asList("a", "b", "c", "d", STOP_WORD, "f", "g", "h", "i", "j");
         FileUtil.writeLinesToFile(SCENARIO_PATH, scenarioLines);
 
-        MyScanner.changeInput(new File(SCENARIO_PATH));
+        myScanner.changeInput(new File(SCENARIO_PATH));
 
         Session session = new Session(answer);
 
@@ -113,6 +114,6 @@ public class SessionTest {
 
         assertTrue(session.isGameFinished());
 
-        MyScanner.setDefaultInput();
+        myScanner.setDefaultInput();
     }
 }

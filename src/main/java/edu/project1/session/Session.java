@@ -5,26 +5,31 @@ import edu.project1.enums.GuessResult;
 import edu.project1.renderer.HangmanRenderer;
 import edu.project1.scanner.MyScanner;
 import java.util.HashSet;
+import java.util.Set;
 import static edu.project1.enums.GuessResult.DEFEAT;
 import static edu.project1.enums.GuessResult.FAILED_GUESS;
 import static edu.project1.enums.GuessResult.START_STAGE;
 import static edu.project1.enums.GuessResult.SUCCESSFUL_GUESS;
 import static edu.project1.enums.GuessResult.WIN;
-import static edu.project1.game.GameProperties.ANSWER_MESSAGE;
 import static edu.project1.game.GameProperties.MAX_ATTEMPTS;
-import static edu.project1.game.GameProperties.STOP_COMMAND_TIP;
 import static edu.project1.game.GameProperties.STOP_GAME_CHAR;
 
 public class Session {
+    private static final HangmanRenderer HANGMAN_RENDERER = new HangmanRenderer();
+    private static final MyScanner SCANNER = new MyScanner();
+
+    private static final String STOP_COMMAND_TIP = "We're going to start! If you want to stop the game, send '!stop'.";
+    private static final String ANSWER_MESSAGE = "the word: ";
+
     private final WordEntity answer;
-    private final HashSet<Character> userGuesses = new HashSet<>();
+    private final Set<Character> userGuesses = new HashSet<>();
     private int attempts = 0;
     private GuessResult result = START_STAGE;
 
     public Session(WordEntity answer) {
 
-        HangmanRenderer.renderMessage(STOP_COMMAND_TIP);
-        HangmanRenderer.renderWordDifficulty(answer.difficulty());
+        HANGMAN_RENDERER.renderMessage(STOP_COMMAND_TIP);
+        HANGMAN_RENDERER.renderWordDifficulty(answer.difficulty());
 
         this.answer = answer;
     }
@@ -34,11 +39,11 @@ public class Session {
             return;
         }
 
-        HangmanRenderer.renderStage(attempts);
-        HangmanRenderer.renderHiddenAnswer(this, answer.word());
-        HangmanRenderer.renderAlphabet(this);
+        HANGMAN_RENDERER.renderStage(attempts);
+        HANGMAN_RENDERER.renderHiddenAnswer(this, answer.word());
+        HANGMAN_RENDERER.renderAlphabet(this);
 
-        char guess = MyScanner.scanInputGuessPersistently(this);
+        char guess = SCANNER.scanInputGuessPersistently(this);
 
         if (guess == STOP_GAME_CHAR) {
             result = giveUp();
@@ -62,7 +67,7 @@ public class Session {
             }
         }
 
-        HangmanRenderer.renderMessage(result.getMessage());
+        HANGMAN_RENDERER.renderMessage(result.getMessage());
     }
 
     public boolean isAnswerGuessed() {
@@ -72,9 +77,9 @@ public class Session {
     public boolean isGameFinished() {
         switch (result) {
             case WIN, DEFEAT -> {
-                HangmanRenderer.renderStage(getAttempts());
-                HangmanRenderer.renderMessage(ANSWER_MESSAGE + answer.word());
-                HangmanRenderer.renderMessage(result.getMessage());
+                HANGMAN_RENDERER.renderStage(getAttempts());
+                HANGMAN_RENDERER.renderMessage(ANSWER_MESSAGE + answer.word());
+                HANGMAN_RENDERER.renderMessage(result.getMessage());
 
                 return true;
             }
@@ -97,7 +102,7 @@ public class Session {
         return DEFEAT;
     }
 
-    private boolean allCharsInSet(String str, HashSet<Character> set) {
+    private boolean allCharsInSet(String str, Set<Character> set) {
         return str.chars()
             .mapToObj(item -> (char) item)
             .allMatch(set::contains);

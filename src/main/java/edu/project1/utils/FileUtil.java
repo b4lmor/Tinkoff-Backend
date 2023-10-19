@@ -1,8 +1,7 @@
 package edu.project1.utils;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -11,7 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class FileUtil {
-    private final static Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger();
 
     private FileUtil() {
     }
@@ -24,16 +23,7 @@ public class FileUtil {
             Files.deleteIfExists(path);
             Files.createFile(path);
 
-            BufferedWriter writer = new BufferedWriter(
-                new FileWriter(filePath, true)
-            );
-
-            for (String line : lines) {
-                writer.write(line);
-                writer.newLine();
-            }
-
-            writer.close();
+            Files.write(path, lines, Charset.defaultCharset());
 
         } catch (IOException e) {
             LOGGER.info(e.getMessage());

@@ -7,22 +7,23 @@ import edu.project1.renderer.HangmanRenderer;
 import edu.project1.scanner.MyScanner;
 import edu.project1.session.Session;
 import java.io.IOException;
-import static edu.project1.game.GameProperties.CAN_NOT_OPEN_DICTIONARY_MESSAGE;
-import static edu.project1.game.GameProperties.CHANGE_TOPIC_MESSAGE;
-import static edu.project1.game.GameProperties.PLAY_AGAIN_MESSAGE;
 
 public class HangmanGame {
-    private static AbstractDictionary dictionary = null;
+    private static final MyScanner SCANNER = new MyScanner();
+    private static final HangmanRenderer HANGMAN_RENDERER = new HangmanRenderer();
 
-    private HangmanGame() {
-    }
+    public static final String CAN_NOT_OPEN_DICTIONARY_MESSAGE = "Looks like the dictionary is broken. Sorry :(";
+    public static final String PLAY_AGAIN_MESSAGE = "Do you wanna play again? (Y / n)";
+    public static final String CHANGE_TOPIC_MESSAGE = "You can change the topic if you want. (Y / n)";
 
-    public static void runGame() {
+    private AbstractDictionary dictionary = null;
+
+    public void runGame() {
         if (dictionary == null) {
             try {
                 dictionary = DictionaryFactory.getDictionaryByInput();
             } catch (IOException ex) {
-                HangmanRenderer.renderMessage(CAN_NOT_OPEN_DICTIONARY_MESSAGE);
+                HANGMAN_RENDERER.renderMessage(CAN_NOT_OPEN_DICTIONARY_MESSAGE);
                 return;
             }
         }
@@ -37,23 +38,23 @@ public class HangmanGame {
         proposePlayAgain();
     }
 
-    private static boolean playerWishToContinue() {
-        return MyScanner.isAnswerYes();
+    private boolean playerWishToContinue() {
+        return SCANNER.isAnswerYes();
     }
 
-    private static boolean playerWantToChangeTopic() {
-        return MyScanner.isAnswerYes();
+    private boolean playerWantToChangeTopic() {
+        return SCANNER.isAnswerYes();
     }
 
-    private static void resetDictionary() {
+    private void resetDictionary() {
         dictionary = null;
     }
 
-    private static void proposePlayAgain() {
-        HangmanRenderer.renderMessage(PLAY_AGAIN_MESSAGE);
+    private void proposePlayAgain() {
+        HANGMAN_RENDERER.renderMessage(PLAY_AGAIN_MESSAGE);
         if (playerWishToContinue()) {
 
-            HangmanRenderer.renderMessage(CHANGE_TOPIC_MESSAGE);
+            HANGMAN_RENDERER.renderMessage(CHANGE_TOPIC_MESSAGE);
             if (playerWantToChangeTopic()) {
                 resetDictionary();
                 runGame();

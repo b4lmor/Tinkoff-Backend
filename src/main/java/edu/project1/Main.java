@@ -8,7 +8,10 @@ public final class Main {
     }
 
     public static void main(String[] args) {
-        HangmanRenderer.renderGreeting();
-        HangmanGame.runGame();
+        HangmanGame game = new HangmanGame();
+        HangmanRenderer hangmanRenderer = new HangmanRenderer();
+
+        hangmanRenderer.renderGreeting();
+        game.runGame();
     }
 }

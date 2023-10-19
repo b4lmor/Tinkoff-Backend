@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -16,12 +17,12 @@ public class DictionaryReader {
     private DictionaryReader() {
     }
 
-    public static ArrayList<WordEntity> readWordsFromDictionary(String dictionaryPath) throws IOException {
+    public static List<WordEntity> readWordsFromDictionary(String dictionaryPath) throws IOException {
         String jsonContent = new String(Files.readAllBytes(Paths.get(dictionaryPath)));
         JSONObject jsonObject = new JSONObject(jsonContent);
         JSONArray wordsArray = jsonObject.getJSONArray(WORD_LIST_KEY_NAME);
 
-        ArrayList<WordEntity> words = new ArrayList<>();
+        List<WordEntity> words = new ArrayList<>();
         for (int i = 0; i < wordsArray.length(); i++) {
 
             JSONObject wordObject = wordsArray.getJSONObject(i);

@@ -8,42 +8,46 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import static edu.project1.game.GameProperties.ASK_FOR_TOPIC;
-import static edu.project1.game.GameProperties.BAD_LETTER_INPUT_MESSAGE;
-import static edu.project1.game.GameProperties.BAD_TOPIC_INPUT_MESSAGE;
+import static edu.project1.game.GameProperties.STOP_GAME_CHAR;
 import static edu.project1.game.GameProperties.STOP_WORD;
 
 public class MyScanner {
+    private static final HangmanRenderer HANGMAN_RENDERER = new HangmanRenderer();
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    private static final char YES_CHAR = 'Y';
+    private static final char NO_CHAR = 'n';
+    private static final String CAN_NOT_OPEN_SCENARIO_MESSAGE = "Can't open the scenario.";
+    private static final String BAD_LETTER_INPUT_MESSAGE = "Please, send a letter that you haven't used yet.";
+    private static final String BAD_TOPIC_INPUT_MESSAGE = "Send a topic number.";
+    private static final String ASK_FOR_TOPIC = "Please, choose a topic for a game! (send a number)";
+
     private static Scanner scanner = new Scanner(System.in);
-    private final static Logger LOGGER = LogManager.getLogger();
 
-    private MyScanner() {
-    }
-
-    public static void changeInput(File input) {
+    public void changeInput(File input) {
         try {
             scanner = new Scanner(input);
         } catch (FileNotFoundException e) {
-            LOGGER.info("can't open the scenario.");
+            LOGGER.info(CAN_NOT_OPEN_SCENARIO_MESSAGE);
         }
     }
 
-    public static void setDefaultInput() {
+    public void setDefaultInput() {
         scanner.close();
         scanner = new Scanner(System.in);
     }
 
-    public static Topic askForTopicPersistently() {
+    public Topic askForTopicPersistently() {
         while (true) {
             try {
                 return askForTopic();
             } catch (Exception ex) {
-                HangmanRenderer.renderMessage(BAD_TOPIC_INPUT_MESSAGE);
+                HANGMAN_RENDERER.renderMessage(BAD_TOPIC_INPUT_MESSAGE);
             }
         }
     }
 
-    public static boolean isAnswerYes() {
+    public boolean isAnswerYes() {
         while (true) {
             String input = scanner.next();
 
@@ -53,24 +57,24 @@ public class MyScanner {
 
             char choice = input.charAt(0);
 
-            if (choice != 'Y' && choice != 'n') {
+            if (choice != YES_CHAR && choice != NO_CHAR) {
                 continue;
             }
 
-            return choice == 'Y';
+            return choice == YES_CHAR;
         }
     }
 
-    public static char scanInputGuessPersistently(Session session) {
+    public char scanInputGuessPersistently(Session session) {
         while (true) {
             String input = scanner.next().toLowerCase();
 
             if (isStopWord(input)) {
-                return '!';
+                return STOP_GAME_CHAR;
             }
 
             if (input.length() != 1) {
-                HangmanRenderer.renderMessage(BAD_LETTER_INPUT_MESSAGE);
+                HANGMAN_RENDERER.renderMessage(BAD_LETTER_INPUT_MESSAGE);
                 continue;
             }
 
@@ -78,7 +82,7 @@ public class MyScanner {
 
             if (!Character.isAlphabetic(guess)
                 || session.isLetterUsed(guess)) {
-                HangmanRenderer.renderMessage(BAD_LETTER_INPUT_MESSAGE);
+                HANGMAN_RENDERER.renderMessage(BAD_LETTER_INPUT_MESSAGE);
                 continue;
             }
 
@@ -86,9 +90,9 @@ public class MyScanner {
         }
     }
 
-    private static Topic askForTopic() {
-        HangmanRenderer.renderMessage(ASK_FOR_TOPIC);
-        HangmanRenderer.renderEnum(Topic.class);
+    private Topic askForTopic() {
+        HANGMAN_RENDERER.renderMessage(ASK_FOR_TOPIC);
+        HANGMAN_RENDERER.renderEnum(Topic.class);
 
         String input = scanner.next();
         if (!input.matches("\\d+")) {
@@ -100,7 +104,7 @@ public class MyScanner {
         return Topic.values()[number - 1];
     }
 
-    private static boolean isStopWord(String input) {
+    private boolean isStopWord(String input) {
         return input.equals(STOP_WORD);
     }
 }
