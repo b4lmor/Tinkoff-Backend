@@ -31,5 +31,8 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+### Logger ###
+!**/src/main/resources/logger.log
+
 ### VS Code ###
 .vscode/
