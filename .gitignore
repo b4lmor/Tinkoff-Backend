@@ -18,6 +18,9 @@ target/
 *.iml
 *.ipr
 
+### Logger ###
+**/src/main/resources/logger.log
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
