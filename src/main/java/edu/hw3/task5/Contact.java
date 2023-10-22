@@ -7,7 +7,7 @@ public class Contact implements Comparable<Contact> {
     private final @NotNull String firstName;
     private final String lastName;
 
-    public Contact(String fullName) {
+    public Contact(@NotNull String fullName) {
         String[] parsedFullName = fullName.split(" ");
 
         if (parsedFullName.length == 1) {

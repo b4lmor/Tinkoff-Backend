@@ -10,7 +10,7 @@ public class NullComparatorTest {
 
     @Test
     @DisplayName("Test Null Comparator with Tree map")
-    public void TestNullComparator() {
+    public void testNullComparator() {
 
         Comparator<String> nullComparator = new NullComparator<>(String::compareTo);
 

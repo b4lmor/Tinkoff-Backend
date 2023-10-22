@@ -13,19 +13,7 @@ public class FrequencyDictionary {
         Map<T, Integer> frequencyDictionary = new HashMap<>();
 
         for (var obj : objects) {
-            if (frequencyDictionary.containsKey(obj)) {
-
-                frequencyDictionary.put(
-                    obj,
-                    frequencyDictionary.get(obj) + 1
-                );
-
-            } else {
-                frequencyDictionary.put(
-                    obj,
-                    1
-                );
-            }
+            frequencyDictionary.merge(obj, 1, Integer::sum);
         }
 
         return frequencyDictionary;

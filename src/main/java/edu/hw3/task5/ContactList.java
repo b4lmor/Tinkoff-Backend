@@ -17,7 +17,7 @@ public class ContactList {
     public static List<Contact> parseContacts(List<String> rawNames, SortType sortType) {
 
         if (rawNames == null) {
-            return new ArrayList<>();
+            return List.of();
         }
 
         List<Contact> contacts = rawNames.stream()
