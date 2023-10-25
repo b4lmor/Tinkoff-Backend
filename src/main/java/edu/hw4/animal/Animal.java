@@ -22,13 +22,22 @@ public record Animal(
     int weight,
     boolean bites
 ) {
+    private static final int DOG_PAWS = 4;
+    private static final int CAT_PAWS = 4;
+    private static final int FISH_PAWS = 0;
+    private static final int SPIDER_PAWS = 8;
+    private static final int BIRD_PAWS = 2;
+
+    private static final int FISH_WEIGHT_UPPER_LIMIT = 1500;
+    private static final int DOG_HEIGHT_BOTTOM_LIMIT = 10;
 
     public int paws() {
         return switch (type) {
-            case CAT, DOG -> 4;
-            case BIRD -> 2;
-            case FISH -> 0;
-            case SPIDER -> 8;
+            case CAT -> CAT_PAWS;
+            case DOG -> DOG_PAWS;
+            case BIRD -> BIRD_PAWS;
+            case FISH -> FISH_PAWS;
+            case SPIDER -> SPIDER_PAWS;
         };
     }
 
@@ -238,16 +247,17 @@ public record Animal(
 
         switch (this.type) {
             case FISH -> {
-                if (this.weight > 1500) {
+                if (this.weight > FISH_WEIGHT_UPPER_LIMIT) {
                     errors.add(TooFatFishError.get());
                 }
             }
             case DOG -> {
-                if (this.height < 10) {
+                if (this.height < DOG_HEIGHT_BOTTOM_LIMIT) {
                     errors.add(TooSmallDogError.get());
                 }
             }
-            default -> {}
+            default -> {
+            }
         }
 
         return errors;
