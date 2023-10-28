@@ -219,19 +219,6 @@ public record Animal(
             .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-
-    public static Map<String, String> improveErrorView(Map<String, Set<ValidationError>> errors) {
-        return errors.entrySet().stream()
-            .collect(
-                Collectors.toMap(
-                    Map.Entry::getKey,
-                    errs -> errs.getValue().stream().map(
-                        ValidationError::getMessage
-                    ).collect(Collectors.joining(System.lineSeparator()))
-                )
-            );
-    }
-
     private static Animal findHeaviestFishInList(List<Animal> entities) {
         return entities.stream()
             .filter(a -> a.type == Type.FISH)

@@ -1,15 +1,16 @@
 package edu.hw4;
 
 import edu.hw4.animal.Animal;
+import edu.hw4.animal.AnimalUtils;
 import edu.hw4.animal.Sex;
 import edu.hw4.animal.Type;
 import edu.hw4.error.ValidationError;
 import edu.hw4.error.impl.BigBonedFishError;
-import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -352,7 +353,7 @@ public class AnimalTest {
     public void testImproveErrorView() {
         Map<String, Set<ValidationError>> animalErrors = Animal.findAllInvalid(fishes);
 
-        Map<String, String> improvedErrors = Animal.improveErrorView(animalErrors);
+        Map<String, String> improvedErrors = AnimalUtils.improveErrorView(animalErrors);
 
         Map<String, String> expectedImprovedErrors = Map.ofEntries(
             Map.entry("shark", "Fish can't be that fat.")
