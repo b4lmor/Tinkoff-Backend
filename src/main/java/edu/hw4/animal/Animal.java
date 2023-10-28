@@ -1,7 +1,7 @@
 package edu.hw4.animal;
 
 import edu.hw4.error.ValidationError;
-import edu.hw4.error.impl.TooFatFishError;
+import edu.hw4.error.impl.BigBonedFishError;
 import edu.hw4.error.impl.TooSmallDogError;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -248,7 +248,7 @@ public record Animal(
         switch (this.type) {
             case FISH -> {
                 if (this.weight > FISH_WEIGHT_UPPER_LIMIT) {
-                    errors.add(TooFatFishError.get());
+                    errors.add(BigBonedFishError.get());
                 }
             }
             case DOG -> {

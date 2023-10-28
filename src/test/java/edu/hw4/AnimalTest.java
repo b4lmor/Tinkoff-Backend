@@ -4,9 +4,8 @@ import edu.hw4.animal.Animal;
 import edu.hw4.animal.Sex;
 import edu.hw4.animal.Type;
 import edu.hw4.error.ValidationError;
-import edu.hw4.error.impl.TooFatFishError;
+import edu.hw4.error.impl.BigBonedFishError;
 import org.junit.jupiter.api.Test;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -18,26 +17,26 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class AnimalTest {
 
     private final List<Animal> entities = List.of(
-        new Animal("Bark barker",      Type.DOG,    Sex.Male,   15, 160, 40, true),
-        new Animal("Bettie",           Type.DOG,    Sex.Female, 19, 120, 20, true),
+        new Animal("Bark barker",      Type.DOG,    Sex.MALE,   15, 160, 40, true),
+        new Animal("Bettie",           Type.DOG,    Sex.FEMALE, 19, 120, 20, true),
 
-        new Animal("Eight-eyed",       Type.SPIDER, Sex.Male,   2,  5,   2,  true),
-        new Animal("Black widow",      Type.SPIDER, Sex.Female, 6,  8,   3,  true),
-        new Animal("Cobwebby",         Type.SPIDER, Sex.Male,   1,  4,   1,  false),
+        new Animal("Eight-eyed",       Type.SPIDER, Sex.MALE,   2,  5,   2,  true),
+        new Animal("Black widow",      Type.SPIDER, Sex.FEMALE, 6,  8,   3,  true),
+        new Animal("Cobwebby",         Type.SPIDER, Sex.MALE,   1,  4,   1,  false),
 
-        new Animal("Kessie",           Type.CAT,    Sex.Female, 11, 100, 15, false),
-        new Animal("Meower",           Type.CAT,    Sex.Male,   16, 130, 14, true),
+        new Animal("Kessie",           Type.CAT,    Sex.FEMALE, 11, 100, 15, false),
+        new Animal("Meower",           Type.CAT,    Sex.MALE,   16, 130, 14, true),
 
-        new Animal("Fly enjoyer",      Type.BIRD,   Sex.Male,   7,  40,  5,  false),
-        new Animal("Eager eagle John", Type.BIRD,   Sex.Male,   18, 110, 30, true),
+        new Animal("Fly enjoyer",      Type.BIRD,   Sex.MALE,   7,  40,  5,  false),
+        new Animal("Eager eagle John", Type.BIRD,   Sex.MALE,   18, 110, 30, true),
 
-        new Animal("swimmer",          Type.FISH,   Sex.Male,   0,  50,  10, false),
-        new Animal("bubble",           Type.FISH,   Sex.Male,   5,  12,  18, false)
+        new Animal("swimmer",          Type.FISH,   Sex.MALE,   0,  50,  10, false),
+        new Animal("bubble",           Type.FISH,   Sex.MALE,   5,  12,  18, false)
     );
 
     private final List<Animal> fishes = List.of(
-        new Animal("fisher",          Type.FISH,   Sex.Female, 53,  320,   500, false),
-        new Animal("shark",           Type.FISH,   Sex.Male,   54,  1090,  1800, true)
+        new Animal("fisher",          Type.FISH,   Sex.FEMALE, 53,  320,   500, false),
+        new Animal("shark",           Type.FISH,   Sex.MALE,   54,  1090,  1800, true)
     );
 
     @Test
@@ -45,17 +44,17 @@ public class AnimalTest {
         List<Animal> sortedEntities = Animal.sortByHeightAsc(entities);
 
         List<Animal> expectedSortedEntities = List.of(
-            new Animal("Cobwebby",         Type.SPIDER, Sex.Male,   1,  4,   1,  false),
-            new Animal("Eight-eyed",       Type.SPIDER, Sex.Male,   2,  5,   2,  true),
-            new Animal("Black widow",      Type.SPIDER, Sex.Female, 6,  8,   3,  true),
-            new Animal("bubble",           Type.FISH,   Sex.Male,   5,  12,  18, false),
-            new Animal("Fly enjoyer",      Type.BIRD,   Sex.Male,   7,  40,  5,  false),
-            new Animal("swimmer",          Type.FISH,   Sex.Male,   0,  50,  10, false),
-            new Animal("Kessie",           Type.CAT,    Sex.Female, 11, 100, 15, false),
-            new Animal("Eager eagle John", Type.BIRD,   Sex.Male,   18, 110, 30, true),
-            new Animal("Bettie",           Type.DOG,    Sex.Female, 19, 120, 20, true),
-            new Animal("Meower",           Type.CAT,    Sex.Male,   16, 130, 14, true),
-            new Animal("Bark barker",      Type.DOG,    Sex.Male,   15, 160, 40, true)
+            new Animal("Cobwebby",         Type.SPIDER, Sex.MALE,   1,  4,   1,  false),
+            new Animal("Eight-eyed",       Type.SPIDER, Sex.MALE,   2,  5,   2,  true),
+            new Animal("Black widow",      Type.SPIDER, Sex.FEMALE, 6,  8,   3,  true),
+            new Animal("bubble",           Type.FISH,   Sex.MALE,   5,  12,  18, false),
+            new Animal("Fly enjoyer",      Type.BIRD,   Sex.MALE,   7,  40,  5,  false),
+            new Animal("swimmer",          Type.FISH,   Sex.MALE,   0,  50,  10, false),
+            new Animal("Kessie",           Type.CAT,    Sex.FEMALE, 11, 100, 15, false),
+            new Animal("Eager eagle John", Type.BIRD,   Sex.MALE,   18, 110, 30, true),
+            new Animal("Bettie",           Type.DOG,    Sex.FEMALE, 19, 120, 20, true),
+            new Animal("Meower",           Type.CAT,    Sex.MALE,   16, 130, 14, true),
+            new Animal("Bark barker",      Type.DOG,    Sex.MALE,   15, 160, 40, true)
         );
 
         assertEquals(
@@ -69,17 +68,17 @@ public class AnimalTest {
         List<Animal> sortedEntities = Animal.sortByWeightDesc(entities);
 
         List<Animal> expectedSortedEntities = List.of(
-            new Animal("Bark barker",      Type.DOG,    Sex.Male,   15, 160, 40, true),
-            new Animal("Eager eagle John", Type.BIRD,   Sex.Male,   18, 110, 30, true),
-            new Animal("Bettie",           Type.DOG,    Sex.Female, 19, 120, 20, true),
-            new Animal("bubble",           Type.FISH,   Sex.Male,   5,  12,  18, false),
-            new Animal("Kessie",           Type.CAT,    Sex.Female, 11, 100, 15, false),
-            new Animal("Meower",           Type.CAT,    Sex.Male,   16, 130, 14, true),
-            new Animal("swimmer",          Type.FISH,   Sex.Male,   0,  50,  10, false),
-            new Animal("Fly enjoyer",      Type.BIRD,   Sex.Male,   7,  40,  5,  false),
-            new Animal("Black widow",      Type.SPIDER, Sex.Female, 6,  8,   3,  true),
-            new Animal("Eight-eyed",       Type.SPIDER, Sex.Male,   2,  5,   2,  true),
-            new Animal("Cobwebby",         Type.SPIDER, Sex.Male,   1,  4,   1,  false)
+            new Animal("Bark barker",      Type.DOG,    Sex.MALE,   15, 160, 40, true),
+            new Animal("Eager eagle John", Type.BIRD,   Sex.MALE,   18, 110, 30, true),
+            new Animal("Bettie",           Type.DOG,    Sex.FEMALE, 19, 120, 20, true),
+            new Animal("bubble",           Type.FISH,   Sex.MALE,   5,  12,  18, false),
+            new Animal("Kessie",           Type.CAT,    Sex.FEMALE, 11, 100, 15, false),
+            new Animal("Meower",           Type.CAT,    Sex.MALE,   16, 130, 14, true),
+            new Animal("swimmer",          Type.FISH,   Sex.MALE,   0,  50,  10, false),
+            new Animal("Fly enjoyer",      Type.BIRD,   Sex.MALE,   7,  40,  5,  false),
+            new Animal("Black widow",      Type.SPIDER, Sex.FEMALE, 6,  8,   3,  true),
+            new Animal("Eight-eyed",       Type.SPIDER, Sex.MALE,   2,  5,   2,  true),
+            new Animal("Cobwebby",         Type.SPIDER, Sex.MALE,   1,  4,   1,  false)
             );
 
         assertEquals(
@@ -111,7 +110,7 @@ public class AnimalTest {
         Animal animal = Animal.findObjWithLongestName(entities);
 
         Animal expectedAnimal
-            = new Animal("Eager eagle John", Type.BIRD, Sex.Male, 18, 110, 30, true);
+            = new Animal("Eager eagle John", Type.BIRD, Sex.MALE, 18, 110, 30, true);
 
         assertEquals(
             animal,
@@ -123,7 +122,7 @@ public class AnimalTest {
     public void testFindGenderMajority() {
         Sex sex = Animal.findGenderMajority(entities);
 
-        Sex expectedSex = Sex.Male;
+        Sex expectedSex = Sex.MALE;
 
         assertEquals(
             sex,
@@ -136,11 +135,11 @@ public class AnimalTest {
         Map<Type, Animal> heaviestObjectsByTypes = Animal.findHeaviestObjectsByTypes(entities);
 
         Map<Type, Animal> expectedHeaviestObjectsByTypes = Map.ofEntries(
-            Map.entry(Type.DOG, new Animal("Bark barker", Type.DOG, Sex.Male, 15, 160, 40, true)),
-            Map.entry(Type.SPIDER, new Animal("Black widow", Type.SPIDER, Sex.Female, 6,  8, 3, true)),
-            Map.entry(Type.CAT, new Animal("Kessie", Type.CAT, Sex.Female, 11, 100, 15, false)),
-            Map.entry(Type.BIRD, new Animal("Eager eagle John", Type.BIRD, Sex.Male, 18, 110, 30, true)),
-            Map.entry(Type.FISH, new Animal("bubble", Type.FISH, Sex.Male, 5, 12,  18, false))
+            Map.entry(Type.DOG, new Animal("Bark barker", Type.DOG, Sex.MALE, 15, 160, 40, true)),
+            Map.entry(Type.SPIDER, new Animal("Black widow", Type.SPIDER, Sex.FEMALE, 6,  8, 3, true)),
+            Map.entry(Type.CAT, new Animal("Kessie", Type.CAT, Sex.FEMALE, 11, 100, 15, false)),
+            Map.entry(Type.BIRD, new Animal("Eager eagle John", Type.BIRD, Sex.MALE, 18, 110, 30, true)),
+            Map.entry(Type.FISH, new Animal("bubble", Type.FISH, Sex.MALE, 5, 12,  18, false))
         );
 
         assertEquals(
@@ -154,7 +153,7 @@ public class AnimalTest {
 
         Animal animal = Animal.findOldest(entities);
 
-        Animal expectedAnimal = new Animal("Bettie", Type.DOG, Sex.Female, 19, 120, 20, true);
+        Animal expectedAnimal = new Animal("Bettie", Type.DOG, Sex.FEMALE, 19, 120, 20, true);
 
         assertEquals(
             animal,
@@ -168,7 +167,7 @@ public class AnimalTest {
         Optional<Animal> animal = Animal.findHeaviestWithHeightLimit(entities, 80);
 
         Optional<Animal> expectedAnimal = Optional.of(
-            new Animal("bubble", Type.FISH, Sex.Male, 5, 12, 18, false)
+            new Animal("bubble", Type.FISH, Sex.MALE, 5, 12, 18, false)
         );
 
         assertEquals(
@@ -196,16 +195,16 @@ public class AnimalTest {
         List<Animal> animals = Animal.findAllWithDifferentPawNumberAndAge(entities);
 
         List<Animal> expectedAnimals = List.of(
-            new Animal("Bark barker",      Type.DOG,    Sex.Male,   15, 160, 40, true),
-            new Animal("Bettie",           Type.DOG,    Sex.Female, 19, 120, 20, true),
-            new Animal("Eight-eyed",       Type.SPIDER, Sex.Male,   2,  5,   2,  true),
-            new Animal("Black widow",      Type.SPIDER, Sex.Female, 6,  8,   3,  true),
-            new Animal("Cobwebby",         Type.SPIDER, Sex.Male,   1,  4,   1,  false),
-            new Animal("Kessie",           Type.CAT,    Sex.Female, 11, 100, 15, false),
-            new Animal("Meower",           Type.CAT,    Sex.Male,   16, 130, 14, true),
-            new Animal("Fly enjoyer",      Type.BIRD,   Sex.Male,   7,  40,  5,  false),
-            new Animal("Eager eagle John", Type.BIRD,   Sex.Male,   18, 110, 30, true),
-            new Animal("bubble",           Type.FISH,   Sex.Male,   5,  12,  18, false)
+            new Animal("Bark barker",      Type.DOG,    Sex.MALE,   15, 160, 40, true),
+            new Animal("Bettie",           Type.DOG,    Sex.FEMALE, 19, 120, 20, true),
+            new Animal("Eight-eyed",       Type.SPIDER, Sex.MALE,   2,  5,   2,  true),
+            new Animal("Black widow",      Type.SPIDER, Sex.FEMALE, 6,  8,   3,  true),
+            new Animal("Cobwebby",         Type.SPIDER, Sex.MALE,   1,  4,   1,  false),
+            new Animal("Kessie",           Type.CAT,    Sex.FEMALE, 11, 100, 15, false),
+            new Animal("Meower",           Type.CAT,    Sex.MALE,   16, 130, 14, true),
+            new Animal("Fly enjoyer",      Type.BIRD,   Sex.MALE,   7,  40,  5,  false),
+            new Animal("Eager eagle John", Type.BIRD,   Sex.MALE,   18, 110, 30, true),
+            new Animal("bubble",           Type.FISH,   Sex.MALE,   5,  12,  18, false)
         );
 
         assertEquals(
@@ -220,10 +219,10 @@ public class AnimalTest {
         List<Animal> animals = Animal.findAllBitersWithUpperHeightLimit(entities, 100);
 
         List<Animal> expectedAnimals = List.of(
-            new Animal("Bark barker",      Type.DOG,    Sex.Male,   15, 160, 40, true),
-            new Animal("Bettie",           Type.DOG,    Sex.Female, 19, 120, 20, true),
-            new Animal("Meower",           Type.CAT,    Sex.Male,   16, 130, 14, true),
-            new Animal("Eager eagle John", Type.BIRD,   Sex.Male,   18, 110, 30, true)
+            new Animal("Bark barker",      Type.DOG,    Sex.MALE,   15, 160, 40, true),
+            new Animal("Bettie",           Type.DOG,    Sex.FEMALE, 19, 120, 20, true),
+            new Animal("Meower",           Type.CAT,    Sex.MALE,   16, 130, 14, true),
+            new Animal("Eager eagle John", Type.BIRD,   Sex.MALE,   18, 110, 30, true)
         );
 
         assertEquals(
@@ -238,7 +237,7 @@ public class AnimalTest {
         List<Animal> animals = Animal.findAllWhereWeightMoreThanHeight(entities);
 
         List<Animal> expectedAnimals = List.of(
-            new Animal("bubble", Type.FISH, Sex.Male, 5, 12, 18, false)
+            new Animal("bubble", Type.FISH, Sex.MALE, 5, 12, 18, false)
         );
 
         assertEquals(
@@ -253,11 +252,11 @@ public class AnimalTest {
         List<Animal> animals = Animal.findAllWithNotOneWordName(entities);
 
         List<Animal> expectedAnimals = List.of(
-            new Animal("Bark barker",      Type.DOG,    Sex.Male,   15, 160, 40, true),
-            new Animal("Eight-eyed",       Type.SPIDER, Sex.Male,   2,  5,   2,  true),
-            new Animal("Black widow",      Type.SPIDER, Sex.Female, 6,  8,   3,  true),
-            new Animal("Fly enjoyer",      Type.BIRD,   Sex.Male,   7,  40,  5,  false),
-            new Animal("Eager eagle John", Type.BIRD,   Sex.Male,   18, 110, 30, true)
+            new Animal("Bark barker",      Type.DOG,    Sex.MALE,   15, 160, 40, true),
+            new Animal("Eight-eyed",       Type.SPIDER, Sex.MALE,   2,  5,   2,  true),
+            new Animal("Black widow",      Type.SPIDER, Sex.FEMALE, 6,  8,   3,  true),
+            new Animal("Fly enjoyer",      Type.BIRD,   Sex.MALE,   7,  40,  5,  false),
+            new Animal("Eager eagle John", Type.BIRD,   Sex.MALE,   18, 110, 30, true)
         );
 
         assertEquals(
@@ -291,21 +290,21 @@ public class AnimalTest {
         List<Animal> animals = Animal.sortByTypeAndSexAndName(entities);
 
         List<Animal> expectedAnimals = List.of(
-            new Animal("Meower",           Type.CAT,    Sex.Male,   16, 130, 14, true),
-            new Animal("Kessie",           Type.CAT,    Sex.Female, 11, 100, 15, false),
+            new Animal("Meower",           Type.CAT,    Sex.MALE,   16, 130, 14, true),
+            new Animal("Kessie",           Type.CAT,    Sex.FEMALE, 11, 100, 15, false),
 
-            new Animal("Bark barker",      Type.DOG,    Sex.Male,   15, 160, 40, true),
-            new Animal("Bettie",           Type.DOG,    Sex.Female, 19, 120, 20, true),
+            new Animal("Bark barker",      Type.DOG,    Sex.MALE,   15, 160, 40, true),
+            new Animal("Bettie",           Type.DOG,    Sex.FEMALE, 19, 120, 20, true),
 
-            new Animal("Eager eagle John", Type.BIRD,   Sex.Male,   18, 110, 30, true),
-            new Animal("Fly enjoyer",      Type.BIRD,   Sex.Male,   7,  40,  5,  false),
+            new Animal("Eager eagle John", Type.BIRD,   Sex.MALE,   18, 110, 30, true),
+            new Animal("Fly enjoyer",      Type.BIRD,   Sex.MALE,   7,  40,  5,  false),
 
-            new Animal("bubble",           Type.FISH,   Sex.Male,   5,  12,  18, false),
-            new Animal("swimmer",          Type.FISH,   Sex.Male,   0,  50,  10, false),
+            new Animal("bubble",           Type.FISH,   Sex.MALE,   5,  12,  18, false),
+            new Animal("swimmer",          Type.FISH,   Sex.MALE,   0,  50,  10, false),
 
-            new Animal("Cobwebby",         Type.SPIDER, Sex.Male,   1,  4,   1,  false),
-            new Animal("Eight-eyed",       Type.SPIDER, Sex.Male,   2,  5,   2,  true),
-            new Animal("Black widow",      Type.SPIDER, Sex.Female, 6,  8,   3,  true)
+            new Animal("Cobwebby",         Type.SPIDER, Sex.MALE,   1,  4,   1,  false),
+            new Animal("Eight-eyed",       Type.SPIDER, Sex.MALE,   2,  5,   2,  true),
+            new Animal("Black widow",      Type.SPIDER, Sex.FEMALE, 6,  8,   3,  true)
         );
 
         assertEquals(
@@ -327,7 +326,7 @@ public class AnimalTest {
 
         Animal animal = Animal.findHeaviestFish(entities, fishes);
 
-        Animal expectedAnimal = new Animal("shark", Type.FISH, Sex.Male, 54, 1090, 1800, true);
+        Animal expectedAnimal = new Animal("shark", Type.FISH, Sex.MALE, 54, 1090, 1800, true);
 
         assertEquals(
             animal,
@@ -340,7 +339,7 @@ public class AnimalTest {
         Map<String, Set<ValidationError>> animalErrors = Animal.findAllInvalid(fishes);
 
         Map<String, Set<ValidationError>> expectedAnimalErrors = Map.ofEntries(
-            Map.entry("shark", Set.of(TooFatFishError.get()))
+            Map.entry("shark", Set.of(BigBonedFishError.get()))
         );
 
         assertEquals(
