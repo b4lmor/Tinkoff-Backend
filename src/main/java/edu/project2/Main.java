@@ -9,12 +9,9 @@ import edu.project2.renderer.MazeRenderer;
 import edu.project2.renderer.impl.MazeRendererDefault;
 import edu.project2.solver.MazeSolverFactory;
 import java.util.Set;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
+@SuppressWarnings("RegexpSinglelineJava")
 public final class Main {
-
-    private final static Logger LOGGER = LogManager.getLogger();
 
     private static final int HEIGHT = 21;
     private static final int WIDTH = 22;
@@ -33,8 +30,14 @@ public final class Main {
                 WIDTH
             );
 
+        MazeRenderer renderer = new MazeRendererDefault();
+
+        System.out.print(renderer.render(maze));
+
         Set<Coordinate> path = (new MazeSolverFactory())
-            .getMazeSolver(SolverName.RECURSIVE)
+            .getMazeSolver(
+                SolverName.WAVE
+            )
             .findPath(
                 maze,
                 new Coordinate(
@@ -47,8 +50,6 @@ public final class Main {
                 )
             );
 
-        MazeRenderer renderer = new MazeRendererDefault();
-
-        LOGGER.info(renderer.render(maze, path));
+        System.out.print(renderer.render(maze, path));
     }
 }

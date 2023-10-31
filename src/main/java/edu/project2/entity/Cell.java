@@ -5,8 +5,12 @@ public enum Cell {
     WALL,
     PASSAGE;
 
-    public boolean isClear(Cell cell) {
-        return cell == PASSAGE;
+    public boolean isPassage() {
+        return this == PASSAGE;
+    }
+
+    public boolean isWall() {
+        return this == WALL;
     }
 }
 

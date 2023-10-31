@@ -16,7 +16,9 @@ public class SolverTest {
 
     private static Stream<Arguments> provideSolvers() {
         return Stream.of(
-            Arguments.of(SolverName.RECURSIVE)
+            Arguments.of(SolverName.BFS),
+            Arguments.of(SolverName.DFS),
+            Arguments.of(SolverName.WAVE)
         );
     }
 

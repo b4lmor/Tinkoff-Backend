@@ -5,31 +5,36 @@ import edu.project2.entity.Coordinate;
 import edu.project2.entity.Maze;
 import edu.project2.renderer.MazeRenderer;
 import java.util.Set;
-import static edu.project2.entity.Cell.WALL;
 
-@SuppressWarnings("MultipleStringLiterals")
 public class MazeRendererDefault implements MazeRenderer {
-    private final String spriteWall = "\u001B[47m" + "   ";
-    private final String spritePassage = "\u001B[0;97m" + "   ";
-    private final String spritePath = "\u001B[0;31m" + " ∙ ";
-    private final String resetColor = "\u001B[0m";
+    private static final String CELL = "   ";
+    private static final String PATH = " ∙ ";
+    private static final String WALL_COLOR = "\u001B[47m";
+    private static final String PASSAGE_COLOR = "\u001B[0;97m";
+    private static final String PATH_COLOR = "\u001B[0;31m";
+    private static final String RESET_COLOR = "\u001B[0m";
+    private static final String LINE_SEPARATOR = System.lineSeparator();
 
     @Override
     public String render(Maze maze) {
-        StringBuilder mazeViewBuilder = new StringBuilder("\n");
+        StringBuilder mazeViewBuilder = new StringBuilder(LINE_SEPARATOR);
 
         Cell[][] grid = maze.getGrid();
 
         for (int i = 0; i < maze.getHeight(); i++) {
             for (int j = 0; j < maze.getWidth(); j++) {
-                mazeViewBuilder.append(
-                    grid[i][j] == WALL
-                        ? spriteWall
-                        : spritePassage
-                );
+                mazeViewBuilder
+                    .append(
+                        grid[i][j].isWall()
+                            ? WALL_COLOR
+                            : PASSAGE_COLOR
+                    )
+                    .append(CELL);
             }
 
-            mazeViewBuilder.append(resetColor + "\n");
+            mazeViewBuilder
+                .append(RESET_COLOR)
+                .append(LINE_SEPARATOR);
         }
 
         return mazeViewBuilder.toString();
@@ -37,26 +42,32 @@ public class MazeRendererDefault implements MazeRenderer {
 
     @Override
     public String render(Maze maze, Set<Coordinate> path) {
-        StringBuilder mazeViewBuilder = new StringBuilder("\n");
+        StringBuilder mazeViewBuilder = new StringBuilder(LINE_SEPARATOR);
 
         Cell[][] grid = maze.getGrid();
 
         for (int i = 0; i < maze.getHeight(); i++) {
             for (int j = 0; j < maze.getWidth(); j++) {
 
-                if (path.contains(new Coordinate(i, j))) {
-                    mazeViewBuilder.append(spritePath);
+                if (path.contains(Coordinate.of(i, j))) {
+                    mazeViewBuilder
+                        .append(PATH_COLOR)
+                        .append(PATH);
 
                 } else {
-                    mazeViewBuilder.append(
-                        grid[i][j] == WALL
-                            ? spriteWall
-                            : spritePassage
-                    );
+                    mazeViewBuilder
+                        .append(
+                            grid[i][j].isWall()
+                                ? WALL_COLOR
+                                : PASSAGE_COLOR
+                        )
+                        .append(CELL);
                 }
             }
 
-            mazeViewBuilder.append(resetColor + "\n");
+            mazeViewBuilder
+                .append(RESET_COLOR)
+                .append(LINE_SEPARATOR);
         }
 
         return mazeViewBuilder.toString();

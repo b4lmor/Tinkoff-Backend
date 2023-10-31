@@ -16,9 +16,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RendererTest {
 
+    private static final String LNSP = System.lineSeparator();
+
     private static Stream<Arguments> provideSolvers() {
         return Stream.of(
-            Arguments.of(SolverName.RECURSIVE)
+            Arguments.of(SolverName.BFS),
+            Arguments.of(SolverName.DFS)
         );
     }
 
@@ -59,17 +62,17 @@ public class RendererTest {
         String mazeToPrint = renderer.render(maze);
         String solvedMazeToPrint = renderer.render(maze, path);
 
-        String expectedMazeToPrint = "\n" + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + "\n"
-                                          + "\u001B[47m" + "   " + "\u001B[0;97m" + "   " + "\u001B[0;97m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + "\n"
-                                          + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[0;97m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + "\n"
-                                          + "\u001B[47m" + "   " + "\u001B[0;97m" + "   " + "\u001B[0;97m" + "   " + "\u001B[0;97m" + "   " + "\u001B[47m" + "   " + "\u001B[0m" + "\n"
-                                          + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + "\n";
+        String expectedMazeToPrint = LNSP + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP
+                                          + "\u001B[47m" + "   " + "\u001B[0;97m" + "   " + "\u001B[0;97m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP
+                                          + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[0;97m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP
+                                          + "\u001B[47m" + "   " + "\u001B[0;97m" + "   " + "\u001B[0;97m" + "   " + "\u001B[0;97m" + "   " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP
+                                          + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP;
 
-        String expectedSolvedMazeToPrint = "\n" + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + "\n"
-                                                + "\u001B[47m" + "   " + "\u001B[0;31m" + " ∙ " + "\u001B[0;31m" + " ∙ " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + "\n"
-                                                + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[0;31m" + " ∙ " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + "\n"
-                                                + "\u001B[47m" + "   " + "\u001B[0;97m" + "   " + "\u001B[0;31m" + " ∙ " + "\u001B[0;31m" + " ∙ " + "\u001B[47m" + "   " + "\u001B[0m" + "\n"
-                                                + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + "\n";
+        String expectedSolvedMazeToPrint = LNSP + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP
+                                                + "\u001B[47m" + "   " + "\u001B[0;31m" + " ∙ " + "\u001B[0;31m" + " ∙ " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP
+                                                + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[0;31m" + " ∙ " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP
+                                                + "\u001B[47m" + "   " + "\u001B[0;97m" + "   " + "\u001B[0;31m" + " ∙ " + "\u001B[0;31m" + " ∙ " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP
+                                                + "\u001B[47m" + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m"   + "   " + "\u001B[47m" + "   " + "\u001B[0m" + LNSP;
 
         assertEquals(mazeToPrint, expectedMazeToPrint);
         assertEquals(solvedMazeToPrint, expectedSolvedMazeToPrint);
