@@ -5,6 +5,11 @@ import java.util.Optional;
 
 @SuppressWarnings("MagicNumber")
 public class DateParser {
+    private static final String DASH_SEPARATOR = "-";
+    private static final String SLASH_SEPARATOR = "/";
+    private static final String SPACE_SEPARATOR = "/";
+    private static final String TWENTY = "20";
+
     public Optional<LocalDate> parse(String rawDate, Pattern.PatternName patternName) {
         return switch (patternName) {
 
@@ -31,7 +36,7 @@ public class DateParser {
     }
 
     private Optional<LocalDate> parserDash(String rawDate) {
-        String[] parts = rawDate.split("-");
+        String[] parts = rawDate.split(DASH_SEPARATOR);
 
         int year = Integer.parseInt(parts[0]);
         int month = Integer.parseInt(parts[1]);
@@ -45,12 +50,12 @@ public class DateParser {
     }
 
     private Optional<LocalDate> parserSlash(String rawDate) {
-        String[] parts = rawDate.split("/");
+        String[] parts = rawDate.split(SLASH_SEPARATOR);
 
         int year = Integer.parseInt(
             parts[2].length() == 4
                 ? parts[2]
-                : "20" + parts[2]
+                : TWENTY + parts[2]
         );
 
         int month = Integer.parseInt(parts[1]);
@@ -64,7 +69,7 @@ public class DateParser {
     }
 
     private Optional<LocalDate> parserAgo(String rawDate) {
-        String[] parts = rawDate.split(" ");
+        String[] parts = rawDate.split(SPACE_SEPARATOR);
         return Optional.of(
             LocalDate.now()
                 .minusDays(

@@ -1,5 +1,6 @@
 package edu.hw5.task3;
 
+import edu.hw5.task3.exception.NoSuchPatternException;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -69,6 +70,6 @@ public class Pattern {
                 )
             )
             .findFirst()
-            .orElseThrow(RuntimeException::new);
+            .orElseThrow(NoSuchPatternException::new);
     }
 }
