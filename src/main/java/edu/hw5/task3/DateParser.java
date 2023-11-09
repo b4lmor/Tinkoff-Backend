@@ -7,7 +7,7 @@ import java.util.Optional;
 public class DateParser {
     private static final String DASH_SEPARATOR = "-";
     private static final String SLASH_SEPARATOR = "/";
-    private static final String SPACE_SEPARATOR = "/";
+    private static final String SPACE_SEPARATOR = " ";
     private static final String TWENTY = "20";
 
     public Optional<LocalDate> parse(String rawDate, Pattern.PatternName patternName) {
