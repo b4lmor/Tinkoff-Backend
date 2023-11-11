@@ -1,6 +1,7 @@
 package edu.hw6.task4;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,6 +20,16 @@ public class StreamComposerTest {
 
     @Test
     void testStreamComposer() {
+
+        File fileToCopy = new File(PATH);
+
+        try {
+            if(!fileToCopy.exists()) {
+                fileToCopy.createNewFile();
+            }
+        } catch (IOException e) {
+            fail();
+        }
 
         Path path = Paths.get(PATH);
 
