@@ -13,6 +13,7 @@ public class PortScanner {
     private static final Logger LOGGER = LogManager.getLogger();
 
     private static final int PORT_NUMBER = 49151;
+    private static final String EMPTY_STRING = "";
 
     public PortScanner() {
     }
@@ -32,8 +33,8 @@ public class PortScanner {
 
         PortInfo.Status tcpStatus;
         PortInfo.Status udpStatus;
-        String tcpService = "";
-        String udpService = "";
+        String tcpService = EMPTY_STRING;
+        String udpService = EMPTY_STRING;
 
         try {
             ServerSocket serverSocket = new ServerSocket(port);

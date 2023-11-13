@@ -20,7 +20,10 @@ public class DiskMap implements Map<String, String> {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
+    private static final String SEPARATOR = ":";
+
     private final File file;
+    private Map<String, String> cacheMap = null;
 
     public DiskMap(String filePath) {
         this.file = new File(filePath);
@@ -28,51 +31,43 @@ public class DiskMap implements Map<String, String> {
 
     @Override
     public int size() {
-        return readFromFile().size();
+        return getCacheMap().size();
     }
 
     @Override
     public boolean isEmpty() {
-        return readFromFile().isEmpty();
+        return getCacheMap().isEmpty();
     }
 
     @Override
     public boolean containsKey(Object key) {
-        return readFromFile().containsKey(key);
+        return getCacheMap().containsKey(key);
     }
 
     @Override
     public boolean containsValue(Object value) {
-        return readFromFile().containsValue(value);
+        return getCacheMap().containsValue(value);
     }
 
     @Override
     public String get(Object key) {
-        return readFromFile().get(key);
+        return getCacheMap().get(key);
     }
 
     @Nullable
     @Override
     public String put(String key, String value) {
-        Map<String, String> map = readFromFile();
-        String oldValue = map.put(key, value);
-        writeToFile(map);
-        return oldValue;
+        return getCacheMap().put(key, value);
     }
 
     @Override
     public String remove(Object key) {
-        Map<String, String> map = readFromFile();
-        String removedValue = map.remove(key);
-        writeToFile(map);
-        return removedValue;
+        return getCacheMap().remove(key);
     }
 
     @Override
     public void putAll(@NotNull Map<? extends String, ? extends String> m) {
-        Map<String, String> map = readFromFile();
-        map.putAll(m);
-        writeToFile(map);
+        getCacheMap().putAll(m);
     }
 
     @Override
@@ -83,19 +78,23 @@ public class DiskMap implements Map<String, String> {
     @NotNull
     @Override
     public Set<String> keySet() {
-        return readFromFile().keySet();
+        return getCacheMap().keySet();
     }
 
     @NotNull
     @Override
     public Collection<String> values() {
-        return readFromFile().values();
+        return getCacheMap().values();
     }
 
     @NotNull
     @Override
     public Set<Entry<String, String>> entrySet() {
-        return readFromFile().entrySet();
+        return getCacheMap().entrySet();
+    }
+
+    public void save() {
+        writeToFile(getCacheMap());
     }
 
     private Map<String, String> readFromFile() {
@@ -105,14 +104,14 @@ public class DiskMap implements Map<String, String> {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(":");
+                String[] parts = line.split(SEPARATOR);
                 if (parts.length == 2) {
                     map.put(parts[0], parts[1]);
                 }
             }
 
         } catch (IOException e) {
-            LOGGER.info(e.getMessage());
+            LOGGER.error(e.getMessage());
         }
 
         return map;
@@ -122,15 +121,21 @@ public class DiskMap implements Map<String, String> {
         try {
             List<String> lines = map.entrySet().stream()
                 .map(
-                    entry -> entry.getKey() + ":" + entry.getValue()
+                    entry -> entry.getKey() + SEPARATOR + entry.getValue()
                 )
                 .toList();
 
             Files.write(file.toPath(), lines, Charset.defaultCharset());
 
         } catch (IOException e) {
-            LOGGER.info(e.getMessage());
+            LOGGER.error(e.getMessage());
         }
     }
 
+    private Map<String, String> getCacheMap() {
+        if (cacheMap == null) {
+            cacheMap = readFromFile();
+        }
+        return  cacheMap;
+    }
 }

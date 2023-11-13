@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HackerNewsTest {
 
-    private static final long ID = 38221386;
+    private static final long ID = 38249214;
     private static final String EXPECTED_TOPIC
-        = "Japan begins third release of treated Fukushima wastewater";
+        = "Ship Shape";
 
     @Test
     void testHackerNews() {

@@ -1,5 +1,7 @@
 package edu.hw6.task1;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +21,8 @@ public class DiskMapTest {
     private static final List<String> VALUES = List.of("val1", "val2", "val3", "val4");
     private static final Map<String, String> PROTOTYPE = new HashMap<>();
 
-    static {
+    @BeforeAll
+    static void initAll(){
         for (int i = 0; i < KEYS.size(); i++) {
             PROTOTYPE.put(KEYS.get(i), VALUES.get(i));
         }
@@ -72,10 +75,7 @@ public class DiskMapTest {
             diskMap.entrySet()
         );
 
-
-        Map<String, String> map = Map.ofEntries(
-            Map.entry("newKey", "newVal")
-        );
+        Map<String, String> map = Map.of("newKey", "newVal");
 
         assertDoesNotThrow(() -> {
             diskMap.putAll(map);

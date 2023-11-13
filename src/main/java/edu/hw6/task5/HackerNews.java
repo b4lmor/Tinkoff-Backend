@@ -19,13 +19,17 @@ public class HackerNews {
 
     private static final String LONG_ARRAY_STRING_PATTERN = "\\[\\d+(,\\d+)*\\]";
     private static final String LONG_ARRAY_STRING_SEPARATOR = ",";
+    private static final String BASE_ITEM_URL
+        = "https://hacker-news.firebaseio.com/v0/item/%d.json";
+    private static final String BASE_STORIES_URL
+        = "https://hacker-news.firebaseio.com/v0/topstories.json";
     private static final int REQUEST_DURATION = 10;
 
     public String news(long id) {
         try (HttpClient client = newHttpClient()) {
 
             HttpRequest request = httpRequestOf(
-                new URI("https://hacker-news.firebaseio.com/v0/item/" + id + ".json")
+                new URI(BASE_ITEM_URL.formatted(id))
             );
 
             var response = client.send(
@@ -48,7 +52,7 @@ public class HackerNews {
         try (HttpClient client = newHttpClient()) {
 
             HttpRequest request = httpRequestOf(
-                new URI("https://hacker-news.firebaseio.com/v0/topstories.json")
+                new URI(BASE_STORIES_URL)
             );
 
             var response = client.send(
