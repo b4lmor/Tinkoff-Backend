@@ -14,6 +14,7 @@ public class GeneralMetric implements Metric {
     private static final String METRIC_NAME = "Общая информация";
     private static final String FIRST_COLUMN_NAME = "Метрика";
     private static final String SECOND_COLUMN_NAME = "Значение";
+    private static final String DASH = "-";
 
     private final List<String> logFileName;
     private final LocalDate startDate;
@@ -37,12 +38,8 @@ public class GeneralMetric implements Metric {
             String key = metricName.getName();
             List<String> value = switch (metricName) {
                 case FILES -> logFileName;
-                case START_DATA -> List.of(startDate == null
-                    ? "-"
-                    : startDate.toString());
-                case END_DATA -> List.of(endDate == null
-                    ? "-"
-                    : endDate.toString());
+                case START_DATA -> List.of(getDateView(startDate));
+                case END_DATA -> List.of(getDateView(endDate));
                 case REQUEST_NUMBER -> List.of(String.valueOf(requestNumber));
                 case AVG_RESPONSE_SIZE -> List.of(String.valueOf(avgResponseSize));
             };
@@ -79,6 +76,12 @@ public class GeneralMetric implements Metric {
     @Override
     public String getSecondColumnName() {
         return SECOND_COLUMN_NAME;
+    }
+
+    private static String getDateView(LocalDate date) {
+        return date == null
+            ? DASH
+            : date.toString();
     }
 
     private enum Metrics {

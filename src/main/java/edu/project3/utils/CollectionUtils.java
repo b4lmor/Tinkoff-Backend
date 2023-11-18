@@ -6,16 +6,17 @@ import java.util.stream.Collectors;
 
 public class CollectionUtils {
 
+    private static final int MAX_ELEMENT_NUMBER = 3;
+
     private CollectionUtils() {
     }
 
-    @SuppressWarnings("MagicNumber")
     public static <T> Map<String, List<String>> getTop3MaxValues(Map<T, Integer> inputMap) {
         return inputMap.entrySet().stream()
             .sorted(
                 Map.Entry.<T, Integer>comparingByValue().reversed()
             )
-            .limit(3)
+            .limit(MAX_ELEMENT_NUMBER)
             .collect(Collectors.toMap(
                     e -> e.getKey().toString(),
                     e -> List.of((e.getValue().toString()))

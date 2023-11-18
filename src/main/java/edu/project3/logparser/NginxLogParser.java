@@ -46,7 +46,7 @@ public class NginxLogParser implements LogParser {
 
     private final Configuration configuration;
 
-    private static BufferedReader currentBufferedReader = null;
+    private BufferedReader currentBufferedReader = null;
     private int inputLogIndex = 0;
 
     public NginxLogParser(Configuration configuration) {

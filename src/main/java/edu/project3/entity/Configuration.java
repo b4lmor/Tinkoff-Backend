@@ -30,7 +30,7 @@ public record Configuration(
         while (i < args.length) {
             var arg = args[i++];
 
-            if (arg.equals(PATH_PATTERN)) {
+            if (PATH_PATTERN.equals(arg)) {
                 if (i < args.length) {
                     arg = args[i++];
                 }
@@ -42,7 +42,7 @@ public record Configuration(
 
             }
 
-            if (arg.equals(FROM_DATE_PATTERN)) {
+            if (FROM_DATE_PATTERN.equals(arg)) {
                 if (i < args.length) {
                     arg = args[i++];
                     inputStartDate = LocalDate.parse(arg, FORMATTER);
@@ -50,7 +50,7 @@ public record Configuration(
 
             }
 
-            if (arg.equals(TO_DATE_PATTERN)) {
+            if (TO_DATE_PATTERN.equals(arg)) {
                 if (i < args.length) {
                     arg = args[i++];
                     inputEndDate = LocalDate.parse(arg, FORMATTER);
@@ -58,7 +58,7 @@ public record Configuration(
 
             }
 
-            if (arg.equals(FORMAT_PATTERN)) {
+            if (FORMAT_PATTERN.equals(arg)) {
                 if (i < args.length) {
                     arg = args[i++];
                     inputFormat = Format.getFormatByString(arg);
