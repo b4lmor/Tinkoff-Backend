@@ -28,5 +28,6 @@ public class MonteCarloTest {
 
         LOGGER.info("Three threads: " + (endTime - startTime) / 1000000000.0);
         LOGGER.info("Pi = " + pi);
+
     }
 }
