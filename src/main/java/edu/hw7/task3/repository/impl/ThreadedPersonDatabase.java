@@ -62,9 +62,12 @@ public class ThreadedPersonDatabase implements PersonDatabase {
 
         try {
             idToPerson.remove(personToDelete.id());
-            nameToPerson.remove(personToDelete.name());
-            addressToPerson.remove(personToDelete.address());
-            phoneNumberToPerson.remove(personToDelete.phoneNumber());
+            nameToPerson.get(personToDelete.name())
+                .remove(personToDelete);
+            addressToPerson.get(personToDelete.address())
+                .remove(personToDelete);
+            phoneNumberToPerson.get(personToDelete.phoneNumber())
+                .remove(personToDelete);
 
         } finally {
             lock.writeLock().unlock();
