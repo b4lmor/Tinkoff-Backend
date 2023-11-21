@@ -1,6 +1,11 @@
 package edu.hw7.task4;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicLong;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,34 +14,34 @@ public class MonteCarlo {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
+    private final SecureRandom random = new SecureRandom();
+
     private static final int RADIUS = 1;
     private static final int THREAD_NUMBER = 3;
 
-    private long totalCount = 0;
-    private AtomicLong circleCount = new AtomicLong(0);
+    private long defaultCircleCount = 0;
+    private AtomicLong atomicCircleCount = new AtomicLong(0);
 
     public double countOneThread(long accuracy) {
-        totalCount = accuracy;
 
         for (int s = 0; s < accuracy; s++) {
             Point point = generateRandomPoint();
             if (isPointInCircle(point)) {
-                circleCount.incrementAndGet();
+                defaultCircleCount++;
             }
         }
 
-        return countPi(totalCount, circleCount.get());
+        return countPi(accuracy, defaultCircleCount);
     }
 
     public double countThreaded(long accuracy) {
-        circleCount = new AtomicLong(0);
-        totalCount = accuracy;
+        atomicCircleCount = new AtomicLong(0);
 
         Thread t1 = new Thread(() -> {
             for (int s = 0; s < accuracy / THREAD_NUMBER; s++) {
                 Point point = generateRandomPoint();
                 if (isPointInCircle(point)) {
-                    circleCount.incrementAndGet();
+                    atomicCircleCount.incrementAndGet();
                 }
             }
         });
@@ -45,7 +50,7 @@ public class MonteCarlo {
             for (int s = 0; s < accuracy / THREAD_NUMBER; s++) {
                 Point point = generateRandomPoint();
                 if (isPointInCircle(point)) {
-                    circleCount.incrementAndGet();
+                    atomicCircleCount.incrementAndGet();
                 }
             }
         });
@@ -55,7 +60,7 @@ public class MonteCarlo {
                  s < accuracy / THREAD_NUMBER + accuracy % THREAD_NUMBER; s++) {
                 Point point = generateRandomPoint();
                 if (isPointInCircle(point)) {
-                    circleCount.incrementAndGet();
+                    atomicCircleCount.incrementAndGet();
                 }
             }
         });
@@ -73,7 +78,34 @@ public class MonteCarlo {
             LOGGER.error(e.getStackTrace());
         }
 
-        return countPi(totalCount, circleCount.get());
+        return countPi(accuracy, atomicCircleCount.get());
+    }
+
+    public double countWithThreadPool(int accuracy) {
+        ExecutorService executor = Executors.newFixedThreadPool(THREAD_NUMBER);
+        List<Runnable> tasks = new ArrayList<>();
+        CountDownLatch latch = new CountDownLatch(THREAD_NUMBER);
+
+        for (int s = 0; s < accuracy; s++) {
+            tasks.add(() -> {
+                if (isPointInCircle(generateRandomPoint())) {
+                    defaultCircleCount++;
+                }
+                latch.countDown();
+            });
+        }
+
+        tasks.forEach(executor::submit);
+
+        try {
+            latch.await();
+
+        } catch (InterruptedException e) {
+            LOGGER.error(e.getStackTrace());
+        }
+
+        executor.close();
+        return countPi(accuracy, defaultCircleCount);
     }
 
     private boolean isPointInCircle(Point point) {
@@ -82,8 +114,6 @@ public class MonteCarlo {
     }
 
     private Point generateRandomPoint() {
-        SecureRandom random = new SecureRandom();
-
         double x = random.nextDouble() * RADIUS;
         double y = random.nextDouble() * RADIUS;
 
