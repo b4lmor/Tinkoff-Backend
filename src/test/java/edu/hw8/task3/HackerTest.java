@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class testHacker {
+public class HackerTest {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
