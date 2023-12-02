@@ -32,12 +32,16 @@ public class Server {
     private static final String FAIL_MESSAGE = "Sorry, I don't have a quote for that keyword.";
 
     private static AtomicInteger connectedClients = new AtomicInteger(0);
-    private boolean isStopped = false;
+    private volatile static boolean isStopped = false;
+
+    private ServerSocket serverSocket;
 
     public void runWithLatch(CountDownLatch startLatch) {
+        ExecutorService threadPool = null;
+
         try {
-            ServerSocket serverSocket = new ServerSocket(PORT);
-            ExecutorService threadPool = Executors.newFixedThreadPool(MAX_CONNECTIONS);
+            serverSocket = new ServerSocket(PORT);
+            threadPool = Executors.newFixedThreadPool(MAX_CONNECTIONS);
             startLatch.countDown();
 
             while (!isStopped) {
@@ -50,8 +54,14 @@ public class Server {
                 threadPool.execute(new ClientHandler(clientSocket));
             }
 
+
         } catch (IOException e) {
             throw new RuntimeException(e);
+
+        } finally {
+            if (threadPool != null) {
+                threadPool.shutdown();
+            }
         }
     }
 
@@ -74,7 +84,7 @@ public class Server {
                 connectedClients.incrementAndGet();
 
                 String inputLine;
-                while ((inputLine = in.readLine()) != null) {
+                while ((inputLine = in.readLine()) != null && !isStopped) {
                     LOGGER.info("Received from client: {}", inputLine);
                     String response = findQuote(inputLine);
                     out.println(response);

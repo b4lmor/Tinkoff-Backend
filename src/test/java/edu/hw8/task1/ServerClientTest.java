@@ -1,9 +1,9 @@
 package edu.hw8.task1;
 
-import edu.hw8.task1.Client;
-import edu.hw8.task1.Server;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,19 +28,33 @@ public class ServerClientTest {
         new Client()
     );
 
-    @Test
-    void testServerClientConnection() throws InterruptedException {
+    private static Server server;
 
+    @BeforeAll
+    static void startServer() {
+        server = new Server();
         CountDownLatch serverStartLatch = new CountDownLatch(1);
 
-        Server server = new Server();
-
-        Thread serverThread = new Thread(() -> {
+        Thread thread = new Thread(() -> {
             server.runWithLatch(serverStartLatch);
         });
 
-        serverThread.start();
-        serverStartLatch.await();
+        thread.start();
+        try {
+            serverStartLatch.await();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @AfterAll
+    static void stopServer() {
+        server.stop();
+    }
+
+    @Test
+    void testServerClientConnection() throws InterruptedException {
 
         Client client = new Client();
         client.connect();
@@ -52,22 +66,10 @@ public class ServerClientTest {
         );
 
         client.disconnect();
-        server.stop();
     }
 
     @Test
     void testServerConnectFiveClients() throws InterruptedException {
-
-        CountDownLatch serverStartLatch = new CountDownLatch(1);
-
-        Server server = new Server();
-
-        Thread serverThread = new Thread(() -> {
-            server.runWithLatch(serverStartLatch);
-        });
-
-        serverThread.start();
-        serverStartLatch.await();
 
         assertDoesNotThrow(() -> {
             FIVE_CLIENTS.forEach(Client::connect);
@@ -83,23 +85,10 @@ public class ServerClientTest {
 
             FIVE_CLIENTS.forEach(Client::disconnect);
         });
-
-        server.stop();
     }
 
     @Test
     void testServerConnectSixClients() throws InterruptedException {
-
-        CountDownLatch serverStartLatch = new CountDownLatch(1);
-
-        Server server = new Server();
-
-        Thread serverThread = new Thread(() -> {
-            server.runWithLatch(serverStartLatch);
-        });
-
-        serverThread.start();
-        serverStartLatch.await();
 
         assertDoesNotThrow(() -> {
             SIX_CLIENTS.forEach(Client::connect);
@@ -115,7 +104,5 @@ public class ServerClientTest {
 
             SIX_CLIENTS.forEach(Client::disconnect);
         });
-
-        server.stop();
     }
 }
