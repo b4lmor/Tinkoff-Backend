@@ -47,7 +47,7 @@ public class ChaosGameOneThread implements ChaosGame {
         var endTime = System.nanoTime();
         pb.stop();
 
-        LOGGER.info("one-thread fractal generating time: {}.", (endTime - startTime) / NANO);
+        LOGGER.info("One-thread fractal generating time: {}.", (endTime - startTime) / NANO);
 
         return canvas;
     }
