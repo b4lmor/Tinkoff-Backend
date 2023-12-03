@@ -11,8 +11,12 @@ import javax.imageio.ImageIO;
 public class Painter {
 
     public void save(FractalImage image, Path fileName) throws IOException {
+        ImageIO.write(generateImage(image), "PNG", fileName.toFile());
+    }
+
+    public BufferedImage generateImage(FractalImage image) {
         BufferedImage bufferedImage =
-            new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
+                new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
 
         for (int x = 0; x < image.getWidth(); x++) {
             for (int y = 0; y < image.getHeight(); y++) {
@@ -21,6 +25,8 @@ public class Painter {
                 bufferedImage.setRGB(x, y, color.getRGB());
             }
         }
-        ImageIO.write(bufferedImage, "PNG", fileName.toFile());
+
+        return bufferedImage;
     }
+
 }

@@ -14,6 +14,9 @@ public class ChaosGameOneThread implements ChaosGame {
     private static final double NANO = 1_000_000_000.0;
     private static final int START = -20;
 
+    private AffineTransformation[] affineTransformations = null;
+    private AffineColor[] affineColors = null;
+
     @Override
     public FractalImage iterate(
         List<Transformation> fractalTransformations,
@@ -21,9 +24,12 @@ public class ChaosGameOneThread implements ChaosGame {
         Rectangle2D.Double drawArea, FractalImage canvas
     ) {
 
-        var affineTransformations = AffineTransformation.getRandomAffineTransformations(samples);
-        var affineColors = AffineColor.getRandomAffineColors(samples);
-
+        if (affineTransformations == null) {
+            affineTransformations = AffineTransformation.getRandomAffineTransformations(samples);
+        }
+        if (affineColors == null) {
+            affineColors = AffineColor.getRandomAffineColors(samples);
+        }
         ChaosGameUtils.SynchronizedProgressBar pb = new ChaosGameUtils.SynchronizedProgressBar(
             "Building fractal (one thread)...",
             (long) samples * iterationPerSample

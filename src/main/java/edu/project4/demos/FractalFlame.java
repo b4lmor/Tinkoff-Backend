@@ -8,7 +8,9 @@ import edu.project4.image.Painter;
 import edu.project4.processor.ImageProcessor;
 import edu.project4.processor.impl.GammaCorrection;
 import edu.project4.transformation.fractalflamevariations.Heart;
+import edu.project4.transformation.fractalflamevariations.Polar;
 import edu.project4.transformation.fractalflamevariations.Popcorn;
+import edu.project4.transformation.fractalflamevariations.Spherical;
 import edu.project4.transformation.fractalflamevariations.Spiral;
 import java.awt.geom.Rectangle2D;
 import java.io.IOException;
@@ -16,9 +18,9 @@ import java.nio.file.Path;
 import java.util.List;
 
 @SuppressWarnings({"MagicNumber", "UncommentedMain"})
-public class HeartFractalFlame {
+public class FractalFlame {
 
-    private HeartFractalFlame() {
+    private FractalFlame() {
     }
 
     public static void main(String[] args) {
@@ -30,16 +32,16 @@ public class HeartFractalFlame {
         FractalImage fractalImage = FractalImage.create(1920, 1080);
         ChaosGame renderer = new ChaosGameOneThread();
         fractalImage = renderer.iterate(
-            List.of(
-                new Popcorn(1.33, -1.1),
-                new Heart(),
-                new Spiral()
-            ),
-            8,
-            1_000_000,
-            3,
-            rect,
-            fractalImage
+                List.of(
+                        new Popcorn(0.0, 1.0),
+                        new Heart(),
+                        new Spiral()
+                ),
+                8,
+                1_000,
+                3,
+                rect,
+                fractalImage
         );
 
 
@@ -52,20 +54,22 @@ public class HeartFractalFlame {
         }
 
 
-
         FractalImage fractalImageMT = FractalImage.create(1920, 1080);
         ChaosGame rendererMT = new ChaosGameMultiThreaded();
         fractalImageMT = rendererMT.iterate(
-            List.of(
-                new Popcorn(1.33, -1.1),
-                new Heart(),
-                new Spiral()
-            ),
-            8,
-            1_000_000,
-            3,
-            rect,
-            fractalImageMT
+                List.of(
+                        new Popcorn(1.7, 0.3),
+                        //new ComplexMultiplication(new Complex(1.2, -2.19)),
+                        new Spherical(),
+                        new Heart(),
+                        new Polar()
+
+                ),
+                8,
+                50_000,
+                6,
+                rect,
+                fractalImageMT
         );
 
         try {
