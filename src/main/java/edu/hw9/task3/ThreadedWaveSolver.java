@@ -79,20 +79,22 @@ public class ThreadedWaveSolver implements MazeSolver {
             List<Coordinate> neighbors = maze.getNeighbors(current.get());
 
             AtomicInteger cnt = new AtomicInteger(0);
-            var latch = new CountDownLatch(1);
+            var latch = new CountDownLatch(neighbors.size());
+            var breakLatch = new CountDownLatch(1);
 
             for (Coordinate neighbor : neighbors) {
 
                 executor.submit(() -> {
                     if (distances[neighbor.row()][neighbor.col()]
                         == distances[current.get().row()][current.get().col()] - 1
-                        && latch.getCount() != 0) {
+                        && breakLatch.getCount() != 0) {
 
-                        latch.countDown();
+                        breakLatch.countDown();
                         cnt.incrementAndGet();
                         current.set(neighbor);
                         path.add(current.get());
                     }
+                    latch.countDown();
                 });
             }
 
