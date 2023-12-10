@@ -56,7 +56,7 @@ public class TestFileProcessor {
                 path.endsWith("hw9\\subdir1\\file2")
                     || path.endsWith("hw9\\file2")
                     || path.endsWith("hw9/subdir1/file2") // for linux
-                    || path.endsWith("hw9/subdir1") // for linux
+                    || path.endsWith("hw9/file2") // for linux
             );
         }
     }
