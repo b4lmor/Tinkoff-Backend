@@ -1,11 +1,9 @@
 package edu.hw7.task4;
 
-import java.security.SecureRandom;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicLong;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,14 +11,12 @@ import org.apache.logging.log4j.Logger;
 public class MonteCarlo {
 
     private static final Logger LOGGER = LogManager.getLogger();
-
-    private final SecureRandom random = new SecureRandom();
-
+    private static final int TWO = 2;
     private static final int RADIUS = 1;
-    private static final int THREAD_NUMBER = 3;
 
+    private final ThreadLocalRandom random = ThreadLocalRandom.current();
+    private final AtomicLong atomicCircleCount = new AtomicLong(0);
     private long defaultCircleCount = 0;
-    private AtomicLong atomicCircleCount = new AtomicLong(0);
 
     public double countOneThread(long accuracy) {
 
@@ -34,83 +30,38 @@ public class MonteCarlo {
         return countPi(accuracy, defaultCircleCount);
     }
 
-    public double countThreaded(long accuracy) {
-        atomicCircleCount = new AtomicLong(0);
-
-        Thread t1 = new Thread(() -> {
-            for (int s = 0; s < accuracy / THREAD_NUMBER; s++) {
-                Point point = generateRandomPoint();
-                if (isPointInCircle(point)) {
-                    atomicCircleCount.incrementAndGet();
-                }
-            }
-        });
-
-        Thread t2 = new Thread(() -> {
-            for (int s = 0; s < accuracy / THREAD_NUMBER; s++) {
-                Point point = generateRandomPoint();
-                if (isPointInCircle(point)) {
-                    atomicCircleCount.incrementAndGet();
-                }
-            }
-        });
-
-        Thread t3 = new Thread(() -> {
-            for (int s = 0;
-                 s < accuracy / THREAD_NUMBER + accuracy % THREAD_NUMBER; s++) {
-                Point point = generateRandomPoint();
-                if (isPointInCircle(point)) {
-                    atomicCircleCount.incrementAndGet();
-                }
-            }
-        });
-
-        t1.start();
-        t2.start();
-        t3.start();
-
-        try {
-            t1.join();
-            t2.join();
-            t3.join();
-
-        } catch (InterruptedException e) {
-            LOGGER.error(e.getStackTrace());
-        }
-
-        return countPi(accuracy, atomicCircleCount.get());
-    }
 
     public double countWithThreadPool(int accuracy) {
-        ExecutorService executor = Executors.newFixedThreadPool(THREAD_NUMBER);
-        List<Runnable> tasks = new ArrayList<>();
-        CountDownLatch latch = new CountDownLatch(THREAD_NUMBER);
 
-        for (int s = 0; s < accuracy; s++) {
-            tasks.add(() -> {
-                if (isPointInCircle(generateRandomPoint())) {
-                    defaultCircleCount++;
+        var threadNumber = Runtime.getRuntime().availableProcessors();
+
+        ExecutorService executor = Executors.newFixedThreadPool(threadNumber);
+        CountDownLatch latch = new CountDownLatch(threadNumber);
+
+        for (int s = 0; s < threadNumber; s++) {
+            executor.submit(() -> {
+                for (int k = 0; k < accuracy / threadNumber; k++) {
+                    if (isPointInCircle(generateRandomPoint())) {
+                        atomicCircleCount.incrementAndGet();
+                    }
                 }
                 latch.countDown();
             });
         }
 
-        tasks.forEach(executor::submit);
-
         try {
             latch.await();
-
         } catch (InterruptedException e) {
             LOGGER.error(e.getStackTrace());
         }
 
         executor.close();
-        return countPi(accuracy, defaultCircleCount);
+        return countPi(accuracy, atomicCircleCount.get());
     }
 
     private boolean isPointInCircle(Point point) {
-        return point.x * point.x
-            + point.y * point.y <= RADIUS * RADIUS;
+        return Math.pow(point.x, TWO)
+            + Math.pow(point.y, TWO) <= RADIUS * RADIUS;
     }
 
     private Point generateRandomPoint() {

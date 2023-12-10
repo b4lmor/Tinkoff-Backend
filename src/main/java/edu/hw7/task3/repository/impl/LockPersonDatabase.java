@@ -6,17 +6,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import org.jetbrains.annotations.Nullable;
 
-public class ThreadedPersonDatabase implements PersonDatabase {
+public class LockPersonDatabase implements PersonDatabase {
 
-    private final Map<Integer, Person> idToPerson = new HashMap<>();
-    private final Map<String, List<Person>> phoneNumberToPerson = new HashMap<>();
-    private final Map<String, List<Person>> nameToPerson = new HashMap<>();
-    private final Map<String, List<Person>> addressToPerson = new HashMap<>();
+    private final Map<Integer, Person> personMap = new HashMap<>();
+    private final Map<String, List<Person>> nameIndex = new HashMap<>();
+    private final Map<String, List<Person>> addressIndex = new HashMap<>();
+    private final Map<String, List<Person>> phoneIndex = new HashMap<>();
 
     private final ReadWriteLock lock = new ReentrantReadWriteLock();
 
@@ -24,10 +23,10 @@ public class ThreadedPersonDatabase implements PersonDatabase {
     public void add(Person person) {
         lock.writeLock().lock();
         try {
-            idToPerson.put(person.id(), person);
-            addToMap(person, person.name(), nameToPerson);
-            addToMap(person, person.address(), addressToPerson);
-            addToMap(person, person.phoneNumber(), phoneNumberToPerson);
+            personMap.put(person.id(), person);
+            addToMap(person, person.name(), nameIndex);
+            addToMap(person, person.address(), addressIndex);
+            addToMap(person, person.phoneNumber(), phoneIndex);
 
         } finally {
             lock.writeLock().unlock();
@@ -41,14 +40,17 @@ public class ThreadedPersonDatabase implements PersonDatabase {
         lock.readLock().lock();
 
         try {
-            personToDelete = Objects.requireNonNull(
-                idToPerson.entrySet().stream()
+            var entry = personMap.entrySet().stream()
                 .filter(
                     p -> p.getValue().id() == id
                 )
                 .findFirst()
-                .orElse(null)
-            ).getValue();
+                .orElse(null);
+            if (entry == null) {
+                personToDelete = null;
+            } else {
+                personToDelete = entry.getValue();
+            }
 
         } finally {
             lock.readLock().unlock();
@@ -61,12 +63,12 @@ public class ThreadedPersonDatabase implements PersonDatabase {
         lock.writeLock().lock();
 
         try {
-            idToPerson.remove(personToDelete.id());
-            nameToPerson.get(personToDelete.name())
+            personMap.remove(personToDelete.id());
+            nameIndex.get(personToDelete.name())
                 .remove(personToDelete);
-            addressToPerson.get(personToDelete.address())
+            addressIndex.get(personToDelete.address())
                 .remove(personToDelete);
-            phoneNumberToPerson.get(personToDelete.phoneNumber())
+            phoneIndex.get(personToDelete.phoneNumber())
                 .remove(personToDelete);
 
         } finally {
@@ -79,7 +81,7 @@ public class ThreadedPersonDatabase implements PersonDatabase {
         lock.readLock().lock();
 
         try {
-            return nameToPerson.getOrDefault(name, null);
+            return nameIndex.getOrDefault(name, null);
 
         } finally {
             lock.readLock().unlock();
@@ -91,7 +93,7 @@ public class ThreadedPersonDatabase implements PersonDatabase {
         lock.readLock().lock();
 
         try {
-            return addressToPerson.getOrDefault(address, null);
+            return addressIndex.getOrDefault(address, null);
 
         } finally {
             lock.readLock().unlock();
@@ -103,7 +105,7 @@ public class ThreadedPersonDatabase implements PersonDatabase {
         lock.readLock().lock();
 
         try {
-            return phoneNumberToPerson.getOrDefault(phoneNumber, null);
+            return phoneIndex.getOrDefault(phoneNumber, null);
 
         } finally {
             lock.readLock().unlock();
