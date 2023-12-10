@@ -7,7 +7,9 @@ import edu.project4.entity.FractalImage;
 import edu.project4.image.Painter;
 import edu.project4.processor.ImageProcessor;
 import edu.project4.processor.impl.GammaCorrection;
+import edu.project4.transformation.Rotation;
 import edu.project4.transformation.Transformation;
+import edu.project4.transformation.fractalflamevariations.ComplexMultiplication;
 import edu.project4.transformation.fractalflamevariations.Heart;
 import edu.project4.transformation.fractalflamevariations.Polar;
 import edu.project4.transformation.fractalflamevariations.Popcorn;
@@ -38,39 +40,56 @@ public class Movie {
         int seconds = 5;
 
         List<Transformation> variations = new ArrayList<>();
-        variations.add(new Spherical());
-        variations.add(new Heart());
         variations.add(new Polar());
 
-        Popcorn v = new Popcorn(1.7, 0.3);
-        variations.add(v);
+        var p = new Popcorn(1.7, 0.3);
+        var s = new Spherical();
+        var h = new Heart();
+        var c = new ComplexMultiplication(1.7, 0.3);
+
+        variations.add(p);
+        variations.add(s);
+        variations.add(h);
+        variations.add(c);
 
         List<Transformation> functions = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             functions.add(peekRandom(variations));
         }
 
-
         AWTSequenceEncoder enc = AWTSequenceEncoder.create25Fps(new File("out.mp4"));
         BufferedImage bi;
         Vector2D x;
+        Vector2D y;
+
         DoubleFunction<Vector2D> curve = t -> new LissajousCurve(1.0, 0.5, 0.0)
                 .apply(t).scalarMultiply(2.0);
+        DoubleFunction<Vector2D> curve1 = t -> new LissajousCurve(1.3, 0.2, 0.1)
+            .apply(t).scalarMultiply(1.8);
+
         FractalImage fractalImage = FractalImage.create(800, 800);
-        Rectangle2D.Double rect = new Rectangle2D.Double(-5.0, -5.0, 10.0, 10.0);
+        Rectangle2D.Double rect = new Rectangle2D.Double(-2, -1.5, 4, 3);
         ChaosGame renderer = new ChaosGameMultiThreaded();
         Painter painter = new Painter();
         ImageProcessor processor = new GammaCorrection();
 
         int n = 25 * seconds;
         for (int i = 0; i < n; i++) {
+            var r = new Rotation(((double) i / n) * 2 * Math.PI);
+
             x = curve.apply((double) i / n);
-            v.setC(x.getX());
-            v.setF(x.getY());
+            r.apply(x);
+            p.setC(x.getX());
+            p.setF(x.getY());
+
+            y = curve1.apply((double) i / n);
+            r.apply(y);
+            c.setReal(y.getX());
+            c.setImaginary(y.getY());
 
             fractalImage = renderer.iterate(
                     functions,
-                    8, 50_000, 6,
+                    8, 30_000, 6,
                     rect, fractalImage
             );
 
