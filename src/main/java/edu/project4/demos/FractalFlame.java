@@ -23,59 +23,51 @@ public class FractalFlame {
     private FractalFlame() {
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Painter painter = new Painter();
         Rectangle2D.Double rect = new Rectangle2D.Double(-4, -3, 8, 6);
         ImageProcessor processor = new GammaCorrection();
 
-
         FractalImage fractalImage = FractalImage.create(1920, 1080);
         ChaosGame renderer = new ChaosGameOneThread();
+
         fractalImage = renderer.iterate(
-                List.of(
-                        new Popcorn(0.0, 1.0),
-                        new Heart(),
-                        new Spiral()
-                ),
-                8,
-                1_000,
-                3,
-                rect,
-                fractalImage
+            List.of(
+                new Popcorn(0.0, 1.0),
+                new Heart(),
+                new Spiral()
+            ),
+            8,
+            1_000,
+            3,
+            rect,
+            fractalImage
         );
 
+        painter.save(fractalImage, Path.of("image.png"));
 
-        try {
-            painter.save(fractalImage, Path.of("image.png"));
-
-            processor.process(fractalImage);
-            painter.save(fractalImage, Path.of("corrected-image.png"));
-        } catch (IOException e) {
-        }
-
+        processor.process(fractalImage);
+        painter.save(fractalImage, Path.of("corrected-image.png"));
 
         FractalImage fractalImageMT = FractalImage.create(1920, 1080);
         ChaosGame rendererMT = new ChaosGameMultiThreaded();
         fractalImageMT = rendererMT.iterate(
-                List.of(
-                        new Popcorn(1.7, 0.3),
-                        //new ComplexMultiplication(new Complex(1.2, -2.19)),
-                        new Spherical(),
-                        new Heart(),
-                        new Polar()
+            List.of(
+                new Popcorn(1.7, 0.3),
+                new Spherical(),
+                new Heart(),
+                new Polar()
 
-                ),
-                8,
-                50_000,
-                6,
-                rect,
-                fractalImageMT
+            ),
+            8,
+            50_000,
+            6,
+            rect,
+            fractalImageMT
         );
 
-        try {
-            processor.process(fractalImageMT);
-            painter.save(fractalImageMT, Path.of("mt-corrected-image.png"));
-        } catch (IOException e) {
-        }
+        processor.process(fractalImageMT);
+        painter.save(fractalImageMT, Path.of("mt-corrected-image.png"));
+
     }
 }

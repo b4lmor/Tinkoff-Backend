@@ -73,7 +73,7 @@ public class Movie {
         Painter painter = new Painter();
         ImageProcessor processor = new GammaCorrection();
 
-        int n = 25 * seconds;
+        final int n = 25 * seconds;
         for (int i = 0; i < n; i++) {
             var r = new Rotation(((double) i / n) * 2 * Math.PI);
 
@@ -93,7 +93,7 @@ public class Movie {
                     rect, fractalImage
             );
 
-            LOGGER.info("Generated: {} \\ {}", i, n);
+            LOGGER.info("Generated: {} / {}", i, n);
 
             processor.process(fractalImage);
             bi = painter.generateImage(fractalImage);

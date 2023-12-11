@@ -7,9 +7,9 @@ public class LissajousCurve implements ParameterizedCurve {
 
   private static final double LISSAJOUS_VALUE = 2.0;
 
-  private double a;
-  private double b;
-  private double d;
+  private final double a;
+  private final double b;
+  private final double d;
 
   public LissajousCurve(double a, double b, double d) {
     this.a = a;

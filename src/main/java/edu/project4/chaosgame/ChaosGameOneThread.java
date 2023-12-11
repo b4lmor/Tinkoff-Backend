@@ -27,9 +27,11 @@ public class ChaosGameOneThread implements ChaosGame {
         if (affineTransformations == null) {
             affineTransformations = AffineTransformation.getRandomAffineTransformations(samples);
         }
+
         if (affineColors == null) {
             affineColors = AffineColor.getRandomAffineColors(samples);
         }
+
         ChaosGameUtils.SynchronizedProgressBar pb = new ChaosGameUtils.SynchronizedProgressBar(
             "Building fractal (one thread)...",
             (long) samples * iterationPerSample

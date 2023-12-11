@@ -74,7 +74,8 @@ public class ChaosGameMultiThreaded implements ChaosGame {
 
         executor.shutdownNow();
 
-        LOGGER.info("Multi-threaded fractal generating time: {}.", (endTime - startTime) / NANO);
+        LOGGER.info("Multi-threaded fractal generating time: {}.",
+            (endTime - startTime) / NANO);
 
         return canvas;
     }
