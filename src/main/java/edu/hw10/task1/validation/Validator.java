@@ -9,10 +9,13 @@ import java.util.function.BiFunction;
 
 public class Validator {
 
+    private Validator() {
+    }
+
     private static final Map<Class<?>, BiFunction<Object, Field, Boolean>> ONE_ARG_VALIDATORS
         = new HashMap<>();
 
-    private static final Class<? extends Annotation>[] availableOneArgValidators = new Class[] {
+    private static final Class<? extends Annotation>[] AVAILABLE_ONE_ARG_VALIDATORS = new Class[] {
         Min.class,
         Max.class,
         MyNotNull.class
@@ -49,7 +52,7 @@ public class Validator {
 
                     if (value > maxValue) {
                         throw new IllegalArgumentException(
-                            "Значение поля " + field.getName() + " должно быть не больше " + maxValue
+                            "Значение " + field.getName() + " должно быть не больше " + maxValue
                         );
                     }
                 } catch (IllegalAccessException e) {
@@ -81,7 +84,7 @@ public class Validator {
         Field[] fields = object.getClass().getDeclaredFields();
 
         Arrays.stream(fields).forEach(
-            field -> Arrays.stream(availableOneArgValidators)
+            field -> Arrays.stream(AVAILABLE_ONE_ARG_VALIDATORS)
                 .filter(field::isAnnotationPresent)
                 .forEach(
                     validator -> ONE_ARG_VALIDATORS.get(validator).apply(object, field)
