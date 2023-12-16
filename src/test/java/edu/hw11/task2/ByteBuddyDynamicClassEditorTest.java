@@ -36,7 +36,7 @@ public class ByteBuddyDynamicClassEditorTest {
         assertEquals(60, result);
     }
 
-    private class RedefinedArithmeticUtils {
+    private static class RedefinedArithmeticUtils {
         public static int sum2(int a, int b) {
             return a * b;
         }
