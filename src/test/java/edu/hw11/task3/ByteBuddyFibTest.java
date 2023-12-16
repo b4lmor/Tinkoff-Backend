@@ -53,7 +53,7 @@ public class ByteBuddyFibTest {
 
                         // F(x - 1) + F(x - 2);
                         mv.visitLabel(l1);
-                        mv.visitFrame(Opcodes.F_NEW, 0, null, 0, null);
+                        mv.visitFrame(Opcodes.F_SAME, 0, null, 0, null);
                         mv.visitVarInsn(Opcodes.ALOAD, 0);
                         mv.visitVarInsn(Opcodes.ILOAD, 1);
                         mv.visitInsn(Opcodes.ICONST_1);
