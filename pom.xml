@@ -230,6 +230,11 @@
                         <consoleOutput>true</consoleOutput>
                         <logViolationsToConsole>true</logViolationsToConsole>
                         <failsOnError>true</failsOnError>
+                        <excludes>
+                            <!--UnsupportedOperationException with a message 'class redefinition failed: attempted to delete a method'.
+                              The jacoco plugin adds a method named '$jacocoInit()' to each class, but it seems byte-buddy ignores this generated method.-->
+                            <exclude>*ArithmeticUtils*</exclude>
+                        </excludes>
                     </configuration>
                 </plugin>
             </plugins>
